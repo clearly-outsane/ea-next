@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
+//components
+import Button from "../PrimaryButton";
+
 //images
 import EALogo from "../../public/svgs/ea-text-logo.svg";
 
@@ -73,9 +76,10 @@ const Header = () => {
         </div>
 
         <div className='flex flex-1 justify-end' style={{ marginLeft: "auto" }}>
-          <a href='javascript:void(0)' className='btn-large'>
+          <Button text='Find An Agent' />
+          {/* <a href='javascript:void(0)' className='btn-large'>
             <div>Find An Agent</div>
-          </a>
+          </a> */}
         </div>
       </div>
     </nav>
