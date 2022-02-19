@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+p,
+.p {
+  margin-bottom: 30px;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+h1,
+.h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 110%;
+  letter-spacing: 1px;
+  color: #000000;
+
+  sup {
+    font-size: 28px;
+  }
+}
+
+h2,
+.h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  color: #000000;
+
+  sup {
+    font-size: 20px;
+  }
+}
+
+h4,
+.h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #545454;
+
+  sup {
+    font-size: 10px;
+  }
+}
+
+h5,
+.h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #82bc1e;
+
+  sup {
+    font-size: 8px;
+  }
+}
+
+p,
+.p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  color: #545454;
+
+  sup {
+    font-size: 8px;
+  }
+}
