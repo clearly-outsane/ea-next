@@ -5,7 +5,7 @@ import Link from "next/link";
 import Button from "../PrimaryButton";
 
 //images
-import EALogo from "../../public/svgs/ea-text-logo.svg";
+import EALogo from "../../assets/svgs/ea-text-logo.svg";
 
 //styles
 import styles from "../../styles/header.module.scss";
