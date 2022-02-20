@@ -1,11 +1,14 @@
 import React from "react";
 
 //styles
-import styles from "../../styles/button.module.scss";
+import styles from "./button.module.scss";
 
-const Button = ({ text = "Click me" }) => {
+const Button = ({ text = "Click me", large = false, type = "button" }) => {
   return (
-    <button className={`${styles["button"]}  ${styles["button--primary"]}`}>
+    <button
+      type={type}
+      className={`${styles["button"]}  ${styles["button--primary"]}`}
+    >
       <span>{text} </span>
     </button>
   );

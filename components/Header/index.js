@@ -8,7 +8,7 @@ import Button from "../PrimaryButton";
 import EALogo from "../../assets/svgs/ea-text-logo.svg";
 
 //styles
-import styles from "../../styles/header.module.scss";
+import styles from "./header.module.scss";
 
 const Header = () => {
   return (
@@ -23,7 +23,7 @@ const Header = () => {
           style={{ marginRight: "auto" }}
         >
           <Link href='/'>
-            <a className={`${styles["nav-logo"]}`}>
+            <a className={`${styles["main-nav__logo"]}`}>
               <EALogo />
             </a>
           </Link>
@@ -32,24 +32,25 @@ const Header = () => {
           <ul className='flex text-3xl md:text-base items-center py-8 md:flex flex-col md:flex-row justify-center fixed md:relative top-0 bottom-0 left-0 right-0 bg-white md:bg-transparent  z-20'>
             <li className=' md:ml-5 md:mr-5 pt-10 md:pt-0'>
               <Link href='/sellers'>
-                <a className={`${styles["nav-link"]}`}>For Sellers </a>
+                <a className={`${styles["main-nav__link"]}`}>For Sellers </a>
               </Link>
             </li>
             <li className=' md:ml-5 md:mr-5 pt-10 md:pt-0'>
               <Link href='/buyers/'>
-                <a className={`${styles["nav-link"]}`}>For Buyers </a>
+                <a className={`${styles["main-nav__link"]}`}>For Buyers </a>
               </Link>
             </li>
             <li className=' md:ml-5 md:mr-5 pt-10 md:pt-0'>
               <Link href='/why-it-works'>
-                <a className={`${styles["nav-link"]}`}> Why It Works </a>
+                <a className={`${styles["main-nav__link"]}`}> Why It Works </a>
               </Link>
             </li>
             <li
               className={`${styles.dropdown} md:ml-5 md:mr-5 pt-10 md:pt-0 hidden`}
             >
-              <a className='nav-link dropdown-btn flex items-center gap-2'>
-                {/* About <Chevron /> */}
+              {/* TODO REFACTOR */}
+              {/* <a className='nav-link dropdown-btn flex items-center gap-2'>
+                About <Chevron />
               </a>
 
               <div className='dropdown-content z-30'>
@@ -70,16 +71,13 @@ const Header = () => {
                     <a className='dropdown-link-container'> Press </a>
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </li>
           </ul>
         </div>
 
         <div className='flex flex-1 justify-end' style={{ marginLeft: "auto" }}>
-          <Button text='Find An Agent' />
-          {/* <a href='javascript:void(0)' className='btn-large'>
-            <div>Find An Agent</div>
-          </a> */}
+          <Button text='Find An Agent' large />
         </div>
       </div>
     </nav>

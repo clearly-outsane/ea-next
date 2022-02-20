@@ -1,0 +1,82 @@
+.hero-form {
+  width: 100%;
+  max-width: 520px;
+
+  @media (max-width: 1024) {
+    max-width: 100%;
+  }
+
+  &__toggle-form-wrapper {
+    margin-bottom: 40px;
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__toggle-form {
+    margin: 0 14px;
+  }
+
+  &__h2 {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 0;
+      transition: width 0.3s ease;
+      height: 2px;
+      background-color: #82bc1e;
+    }
+    &--active {
+      opacity: 1;
+      &::before {
+        width: 100%;
+      }
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__input {
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 60px;
+    padding: 22px;
+  }
+
+  // @media (max-width: 767px) {
+  //   .btn-large {
+  //     width: 100%;
+  //     text-align: center;
+  //   }
+  // }
+  &__location-icon {
+    position: absolute;
+    right: 22px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
