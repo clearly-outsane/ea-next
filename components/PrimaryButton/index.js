@@ -6,6 +6,7 @@ import styles from "./button.module.scss";
 const Button = ({ text = "Click me", large = false, type = "button" }) => {
   return (
     <button
+      name={type}
       type={type}
       className={`${styles["button"]}  ${styles["button--primary"]}`}
     >

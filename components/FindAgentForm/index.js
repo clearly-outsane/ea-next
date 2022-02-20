@@ -120,7 +120,7 @@ const FindAgentForm = () => {
                 id='address'
                 name='AddressData'
                 placeholder='Enter Your Address'
-                apiKey='AIzaSyAP4AJKi5yd5cXWRTS6JMlBFeSSA7VgHkE'
+                apiKey={process.env.NEXT_PUBLIC_GMAPS_API_KEY}
                 onPlaceSelected={onPlaceSelected}
                 className={`${styles["hero-form__input"]}`}
                 options={{
@@ -209,7 +209,7 @@ const FindAgentForm = () => {
                 name='Zip-Code-Buyer'
                 data-name='Zip'
                 placeholder='Enter ZIP Code'
-                apiKey='AIzaSyAP4AJKi5yd5cXWRTS6JMlBFeSSA7VgHkE'
+                apiKey={process.env.NEXT_PUBLIC_GMAPS_API_KEY}
                 onPlaceSelected={onPlaceSelected}
                 className={`${styles["hero-form__input"]}`}
                 options={{
