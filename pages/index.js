@@ -137,8 +137,8 @@ export default function Home() {
                 <div>CALL NOW</div>
               </a>
             </div>
-            <div className='flex flex-col justify-center align-start relative overflow-hidden'>
-              <div className={`bg-image`}>
+            <div className='flex flex-col justify-center align-start relative overflow-hidden pointer-events-none'>
+              <div className={`bg-image `}>
                 <Image
                   layout='fill'
                   objectFit='cover'
@@ -152,7 +152,9 @@ export default function Home() {
                 questions, walk you through your options, and help you make more
                 informed decisions about selling or buying a home.
               </p>
-              <a href='tel:855-472-9275'>Call Now (855) 472-9275</a>
+              <a href='tel:855-472-9275' className='pointer-events-auto'>
+                Call Now (855) 472-9275
+              </a>
             </div>
           </div>
 
