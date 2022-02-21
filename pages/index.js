@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import { InView } from "react-intersection-observer";
+import CountUp from "react-countup";
 
 //components
 import Header from "../components/Header";
@@ -177,6 +179,108 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className={`${styles["numbers-section"]} w-full relative`}>
+          <Image
+            objectPosition='bottom'
+            layout='fill'
+            src='/svgs/house-bg-2.svg'
+            alt=''
+            className={`${styles["numbers-section__bg-image"]}`}
+          />
+
+          <div className='px-5 lg:px-8'>
+            <div
+              className={`container mx-auto flex flex-row justify-center content-center ${styles["numbers-section__top-content"]} `}
+            >
+              <div className='flex flex-col basis-1/2 justify-center content-start items-start'>
+                <h2>
+                  The Number’s Speak
+                  <br /> For Themselves
+                </h2>
+              </div>
+
+              <div className='flex flex-col basis-1/2 justify-center content-start items-start'>
+                <p>
+                  For over a decade, EffectiveAgents has helped buyers and
+                  sellers like you connect with incredible real estate agents
+                  that are capable of producing outstanding results.
+                </p>
+              </div>
+            </div>
+
+            <div className='container mx-auto grid grid-cols-3 lg:divide-x-2 divide-light-blue-divide'>
+              <div className='flex flex-col justify-center content-start items-center lg:items-start'>
+                <InView triggerOnce>
+                  {({ inView, ref, entry }) => (
+                    <div ref={ref}>
+                      {inView ? (
+                        <CountUp
+                          className={`${styles["numbers-section__stat"]}`}
+                          start={100000}
+                          end={172700}
+                          suffix='+'
+                          useEasing={true}
+                        />
+                      ) : null}
+                    </div>
+                  )}
+                </InView>
+                <h4>Homes Sold</h4>
+              </div>
+
+              <div className='flex justify-center content-start items-center'>
+                <div className='flex flex-col' style={{ minWidth: 276 }}>
+                  <InView triggerOnce>
+                    {({ inView, ref, entry }) => (
+                      <div ref={ref}>
+                        {inView ? (
+                          <CountUp
+                            className={`${styles["numbers-section__stat"]}`}
+                            start={800000}
+                            end={872700}
+                            suffix='+'
+                            useEasing={true}
+                          />
+                        ) : null}
+                      </div>
+                    )}
+                  </InView>
+                  <h4>Customer’s Matched</h4>
+                </div>
+              </div>
+
+              <div className='flex flex-col justify-center content-start items-end'>
+                <InView triggerOnce>
+                  {({ inView, ref, entry }) => (
+                    <div ref={ref}>
+                      {inView ? (
+                        <CountUp
+                          className={`${styles["numbers-section__stat"]}`}
+                          start={1000}
+                          end={1186}
+                          suffix='+'
+                          useEasing={true}
+                        />
+                      ) : null}
+                    </div>
+                  )}
+                </InView>
+
+                <h4>Positive Reviews</h4>
+              </div>
+            </div>
+
+            <div
+              className={`container mx-auto flex flex-col justify-around items-center ${styles["numbers-section__bottom-content"]}`}
+            >
+              <h2>Find The Perfect Agent For Your Transaction.</h2>
+              <Button text='Find an Agent' />
+            </div>
+          </div>
+        </section>
+
+        <section> hi</section>
       </main>
     </div>
   );
