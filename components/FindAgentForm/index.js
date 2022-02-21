@@ -1,3 +1,5 @@
+//TODO - Refactor google autocomplete form to use `use-places-autocomplete` instead
+
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Autocomplete from "react-google-autocomplete";
@@ -184,7 +186,7 @@ const FindAgentForm = () => {
                 value={formData.zipCodeValue}
               />
             </div>
-            <Button text='Find an Agent' type='submit' large />
+            <Button text='Find an Agent' type='submit' />
           </form>
         </div>
 
@@ -263,7 +265,7 @@ const FindAgentForm = () => {
                 value={formData.zipCodeValue}
               />
             </div>
-            <Button text='Find an Agent' type='submit' large />
+            <Button text='Find an Agent' type='submit' />
           </form>
         </div>
       </div>

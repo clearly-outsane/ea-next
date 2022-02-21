@@ -13,7 +13,7 @@ import styles from "./header.module.scss";
 const Header = () => {
   return (
     <nav
-      className={`${styles["main-nav"]}  w-full fixed hidden lg:block bg-white z-20`}
+      className={`${styles["main-nav"]}  w-screen fixed hidden lg:block bg-white z-20`}
     >
       <div className='px-6 flex items-center justify-between'>
         <div

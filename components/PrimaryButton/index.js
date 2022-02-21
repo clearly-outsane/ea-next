@@ -3,7 +3,7 @@ import React from "react";
 //styles
 import styles from "./button.module.scss";
 
-const Button = ({ text = "Click me", large = false, type = "button" }) => {
+const Button = ({ text = "Click me", type = "button" }) => {
   return (
     <button
       name={type}
