@@ -1,0 +1,15 @@
+.call-to-action {
+  &__content {
+    overflow: hidden;
+    padding: 100px 50px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    h2 {
+      color: #fff;
+    }
+  }
+  &__bg-image {
+    object-fit: cover;
+    z-index: -1;
+  }
+}

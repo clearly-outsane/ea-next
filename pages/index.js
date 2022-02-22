@@ -3,14 +3,16 @@ import Image from "next/image";
 import { InView } from "react-intersection-observer";
 import CountUp from "react-countup";
 
+//styles
+import styles from "../styles/home.module.scss";
+import Button from "../components/PrimaryButton";
+
 //components
 import Header from "../components/Header";
 import FindAgentForm from "../components/FindAgentForm";
 import CustomerReviewCard from "../components/CustomerReviewCard";
-
-//stlyes
-import styles from "../styles/home.module.scss";
-import Button from "../components/PrimaryButton";
+import BottomCTA from "../components/BottomCTA";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -340,6 +342,8 @@ export default function Home() {
             <Button text='View All Reviews' />
           </div>
         </section>
+        <BottomCTA />
+        <Footer />
       </main>
     </div>
   );
