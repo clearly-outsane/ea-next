@@ -6,6 +6,7 @@ import CountUp from "react-countup";
 //components
 import Header from "../components/Header";
 import FindAgentForm from "../components/FindAgentForm";
+import CustomerReviewCard from "../components/CustomerReviewCard";
 
 //stlyes
 import styles from "../styles/home.module.scss";
@@ -280,7 +281,65 @@ export default function Home() {
           </div>
         </section>
 
-        <section> hi</section>
+        <section
+          className={`${styles["stories-section"]} w-full px-5 lg:px-8 `}
+        >
+          <div className='container mx-auto flex flex-col justify-center items-center content-center top-content'>
+            <h2>What Our Customers Say</h2>
+            <p className='text-center'>
+              Meet some of our customers, read their stories, and <br /> imagine
+              what EffectiveAgents® can do for you.
+            </p>
+            <div
+              className={`${styles["stories-section__review-bar"]} flex flex-row justify-center items-center`}
+            >
+              <div className={`${styles["stories-section__rating"]}`}>4.9</div>
+              <div className={`${styles["stories-section__stars"]}`}>
+                <Image
+                  src='/svgs/empty-stars.svg'
+                  alt='Ratings'
+                  width={126}
+                  height={23}
+                />
+              </div>
+              <p>
+                Google rating based on over{" "}
+                <a href='#' className='text-cyan-700'>
+                  1,182+ reviews
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className='container mx-auto flex flex-row justify-center items-stretch content-center '>
+            <CustomerReviewCard
+              name='Adam'
+              review="Great customer service. I was contacted by 3 agents quicklyinterviewed all 3 and picked one that I felt most comfortable with.
+            Honestly all 3 would have done a great job so it actually was a tough
+            decision. I didn't expect this high quality agents to choose from initially
+            but glad I did. Effective agents didn't spam my email or bother me and
+            the 1 time I had a question they responded same day. I sold my home
+            and bought a new one with ease."
+              date='AZ , 2022-01-13 18:48:12'
+            />
+            <CustomerReviewCard
+              name='J.F. Jimenez'
+              review='effectiveagents.com provided me with the names of three high
+            performance realtors, two of which contacted me within 5 minutes. The
+            realtor I selected has proven to be one of the best I have encountered
+            in my 8 home sales experiences. He has referred me to local resources
+            he knows and trusts for the repairs I need to address for optimizing my
+            home for sale. I highly recommend effectiveagents.com as a great
+            resource for finding a performance-proven realtor to help you with the
+            sale/purchase of home'
+              date='PA , 2021-08-31 12:56:08'
+            />
+          </div>
+          <div
+            className={`container mx-auto flex flex-col justify-around items-center ${styles["stories-section__bottom-content"]}`}
+          >
+            <Button text='View All Reviews' />
+          </div>
+        </section>
       </main>
     </div>
   );

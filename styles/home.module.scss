@@ -229,3 +229,62 @@
     background-size: 480px;
   }
 }
+
+.stories-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  // @media (max-width: 1024px) {
+  //   .container {
+  //     flex-direction: column;
+  //   }
+  //   .post-time {
+  //     font-size: 14px;
+  //     width: 100%;
+  //     text-align: left;
+  //     margin-top: 10px;
+  //   }
+  // }
+  &__review-bar {
+    padding: 25px 40px;
+    border-radius: 30px;
+    background-color: #ecf6fa;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      padding-bottom: 55px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+  &__rating {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 140%;
+    letter-spacing: 1%;
+    color: #82bc1e;
+  }
+
+  &__stars {
+    margin: 0 35px;
+    @media (max-width: 1024px) {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+
+  &__middle-content {
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+  &__bottom-content {
+    margin-top: 50px;
+  }
+  @media (max-width: 1024px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
