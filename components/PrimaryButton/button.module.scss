@@ -91,3 +91,16 @@
   transition-delay: 0.4s;
   transition-timing-function: linear;
 }
+
+.button--white:hover span {
+  transition: color 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+  color: #82bc1e;
+}
+
+.button--white::before {
+  background: #fff;
+}
+
+.button--white::after {
+  background: #fff;
+}
