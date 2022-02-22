@@ -81,7 +81,7 @@ const FindAgentForm = () => {
         <div
           className={`${styles["hero-form__toggle-form-wrapper"]} flex flex-row justify-center content-center align-center`}
         >
-          <a
+          <div
             className={` ${styles["hero-form__h2"]} ${
               styles["hero-form__toggle-form"]
             } ${formType === "Seller" ? styles["hero-form__h2--active"] : ""} `}
@@ -90,8 +90,8 @@ const FindAgentForm = () => {
             }}
           >
             I’m a Seller
-          </a>
-          <a
+          </div>
+          <div
             className={` ${styles["hero-form__h2"]} ${
               styles["hero-form__toggle-form"]
             } ${formType === "Buyer" ? styles["hero-form__h2--active"] : ""} `}
@@ -100,7 +100,7 @@ const FindAgentForm = () => {
             }}
           >
             I’m a Buyer
-          </a>
+          </div>
         </div>
 
         <div
