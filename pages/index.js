@@ -37,6 +37,7 @@ export default function Home() {
               layout='fill'
               objectFit='cover'
               objectPosition='center -320px'
+              priority
               // quality={100}
             />
           </div>

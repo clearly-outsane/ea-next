@@ -306,6 +306,80 @@ const Sellers = ({ sellersTransactions }) => {
           </div>
         </section>
 
+        <section
+          className={` ${styles["speak-section"]} w-full flex justify-center items-center pb-24 pt-16 px-8 `}
+        >
+          <div className='container mx-auto flex justify-center items-center'>
+            <div
+              className={`${styles["speak-section__call-card"]}  self-stretch my-10 relative overflow-hidden webkit-rounded-full`}
+            >
+              <div className={`${styles["speak-section__agent-image"]}`}>
+                <Image
+                  src='/images/agents/ContactAgent.jpeg'
+                  layout='fill'
+                  alt='bg image'
+                  objectFit='cover'
+                  className={`${styles["speak-section__agent-image"]}`}
+                />
+              </div>
+              <div
+                className={`${styles["speak-section__overlay"]} p-8 h-full w-full flex justify-center items-end pointer-events-auto`}
+              >
+                <a
+                  className={`justify-center items-center flex w-full ${styles["speak-section__button-container"]}`}
+                  href='#'
+                >
+                  <div
+                    className={`${styles["speak-section__button-label"]}  py-6 px-5`}
+                  >
+                    A team member is ready!
+                  </div>
+                  <div
+                    className={`${styles["speak-section__button"]} uppercase text-white justify-self-end py-6 px-5`}
+                  >
+                    Call now
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              className={`${styles["speak-section__content"]} relative flex w-full h-full items-center overflow-hidden pointer-events-none`}
+            >
+              <Image
+                src='/images/light-blue-roads.jpg'
+                layout='fill'
+                alt='bg image'
+                objectFit='cover'
+                className={`${styles["speak-section__bg-image"]}`}
+              />
+
+              <div className='absolute top-0 bottom-0 left-0 right-0 -z-20 overlay' />
+
+              <div className='hidden lg:block basis-1/3'> </div>
+              <div className='flex flex-col my-24'>
+                <h2 style={{ maxWidth: 610 }}>
+                  Speak To A Team Member About Selling Your Home Faster & For
+                  More Money.
+                </h2>
+                <p style={{ maxWidth: 527 }}>
+                  We have an experienced team of home seller advocates standing
+                  by to help you sort through thousands of real estate agents in
+                  your area. Our analysts have access to proprietary performance
+                  data that can help you sell your home for the best price in
+                  record time. <br /> <br /> Representatives are available 7
+                  days a week 9:00 AM - 7:00 PM.
+                </p>
+                <a
+                  href='tel:855-472-9275'
+                  className='text-sky-600 pointer-events-auto'
+                >
+                  Call (855) 472-9275
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <BottomCTA />
         <Footer />
       </main>
