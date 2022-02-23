@@ -246,7 +246,7 @@ const Sellers = ({ sellersTransactions }) => {
                     return (
                       <SwiperSlide
                         key={transaction.name}
-                        className='swiper-slide-animated'
+                        className='swiper-slide-animated width-auto-important'
                       >
                         <TransactionCard {...transaction} />
                       </SwiperSlide>

@@ -21,13 +21,6 @@ const TransactionCard = ({
       <div
         className={`${styles["transaction-card__image"]}  webkit-rounded-full overflow-hidden grid relative`}
       >
-        {/* <HouseImage
-          name={house.trim()}
-          style={{
-            gridArea: "1/1",
-          }}
-          className='w-full h-full'
-        /> */}
         <Image
           layout='fill'
           objectFit='cover'
@@ -36,10 +29,6 @@ const TransactionCard = ({
         />
         <div
           className={`grid z-10 w-full h-full ${styles["transaction-card__overlay"]}`}
-          style={{
-            gridArea: "1/1",
-            // position: "relative",
-          }}
         >
           <div
             className={`flex uppercase font-bold justify-self-end text-white ${styles["transaction-card__top-label"]} items-start`}
@@ -88,7 +77,6 @@ const TransactionCard = ({
             src='/svgs/black-map-pin.svg'
             alt='map pin icon'
           />
-          {/* <MapPin /> */}
         </div>
       </div>
     </div>
