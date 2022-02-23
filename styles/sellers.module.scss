@@ -1,14 +1,3 @@
-.swiper-container {
-  // CSS Grid/Flexbox bug size workaround
-  // @see https://github.com/kenwheeler/slick/issues/982
-  min-height: 0;
-  min-width: 0;
-}
-
-.swiper-slide {
-  width: auto;
-}
-
 .hero-section {
   padding-top: 88px;
   min-height: 800px;
@@ -64,20 +53,70 @@
     height: 70px;
     min-width: 70px;
   }
-  .points {
-    .flex {
-      @media (max-width: 1024px) {
-        flex-direction: column;
-      }
-    }
-    .points-safari-gap {
-      @media (max-width: 1024px) {
-        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-          &:not(:last-child) {
-            margin-bottom: 40px;
-          }
+  &__safari-gap {
+    @media (max-width: 1024px) {
+      @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+        &:not(:last-child) {
+          margin-bottom: 40px;
         }
       }
+    }
+  }
+}
+
+.transactions-section {
+  @media (max-width: 1024px) {
+    padding-top: 0;
+  }
+  .swiper-container {
+    @media (max-width: 1024px) {
+      grid-row: 2;
+    }
+  }
+
+  &__carousel {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  &__prev-wrapper {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  &__prev-wrapper,
+  &__next {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    &__carousel {
+      left: initial;
+      right: initial;
+      margin-right: 64px;
+      width: initial;
+      margin-left: calc(-100vw / 2 + 1024px / 2);
+    }
+    &__next {
+      display: initial;
+    }
+    &__prev-wrapper {
+      display: flex;
+    }
+  }
+  @media (min-width: 1280px) {
+    &__carousel {
+      margin-left: calc(-100vw / 2 + 1280px / 2);
+    }
+  }
+  @media (min-width: 1536px) {
+    &__carousel {
+      margin-left: calc(-100vw / 2 + 1536px / 2);
     }
   }
 }

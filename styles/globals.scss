@@ -116,3 +116,14 @@ p,
   overflow: hidden;
   z-index: -1;
 }
+
+.swiper-container {
+  // CSS Grid/Flexbox bug size workaround
+  // @see https://github.com/kenwheeler/slick/issues/982
+  min-height: 0;
+  min-width: 0;
+}
+
+.swiper-slide {
+  width: auto !important;
+}

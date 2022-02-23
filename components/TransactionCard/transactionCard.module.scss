@@ -1,0 +1,159 @@
+.transaction-card {
+  width: 265.17px;
+
+  &__bg_image {
+    z-index: -1;
+  }
+
+  &__top-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 140%;
+  }
+  &__subtitle {
+    color: #545454;
+    font-size: 10px;
+    line-height: 160%;
+    margin-top: 4px;
+  }
+  &__blue-circle {
+    width: 47px;
+    height: 47px;
+    background: #ecf6fa;
+  }
+  &__safari-profile-gap {
+    @media (max-width: 1024px) {
+      @supports (-webkit-touch-callout: none) {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &__image {
+    height: 353.56px;
+
+    border-radius: 30px;
+  }
+  &__overlay {
+    padding: 30px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 52.08%,
+      rgba(0, 0, 0, 0.6) 72.92%
+    );
+  }
+  &__profile-circle {
+    width: 56px;
+    height: 56px;
+  }
+  &__profile-location {
+    font-style: italic;
+    font-size: 13px;
+    line-height: 160%;
+  }
+  &__profile-name {
+    font-size: 14px;
+    line-height: 140%;
+    @media (min-width: 1024px) {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .transaction-card {
+    width: 330px;
+    &__top-label {
+      font-size: 12px;
+
+      letter-spacing: 1.5px;
+    }
+    &__title {
+      font-size: 28px;
+      line-height: 140%;
+    }
+    &__blue-circle {
+      width: 59px;
+      height: 59px;
+    }
+    &__subtitle {
+      font-size: 13px;
+      line-height: 160%;
+      margin-top: 4px;
+    }
+    &__image {
+      height: 440px;
+    }
+    &__bottom-seller-profile-name {
+      font-size: 18px;
+      line-height: 140%;
+    }
+    &__profile-circle {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+// .right-card {
+//   .transaction-card {
+//     width: 214px;
+//     @media (max-width: 1024px) {
+//       .card-title {
+//         font-size: 20px;
+//       }
+//       .blue-circle {
+//         width: 38.26px;
+//         height: 38.26px;
+//         > svg {
+//           height: 20px;
+//           width: 20px;
+//         }
+//       }
+//       .bottom-seller-profile-location {
+//         font-size: 10px;
+//         margin-top: 3px;
+//       }
+//       .card-bottom-info {
+//         padding-top: 16px;
+//       }
+//       .top-label {
+//         font-size: 8px;
+//       }
+//     }
+//   }
+//   .transaction-card-image {
+//     height: 285.33px;
+//     @media (max-width: 1024px) {
+//       .profile-circle {
+//         width: 45.39px;
+//         height: 45.39px;
+//       }
+//     }
+//   }
+//   .overlay {
+//     padding: 20px;
+//   }
+//   @media (min-width: 1024px) {
+//     .overlay {
+//       padding: 30px;
+//     }
+//     .transaction-card {
+//       width: 260px;
+//     }
+//     .transaction-card-image {
+//       height: 380px;
+//     }
+//   }
+//   @media (min-width: 1280px) {
+//     .transaction-card {
+//       width: 290px;
+//     }
+//     .transaction-card-image {
+//       height: 420px;
+//     }
+//   }
+// }

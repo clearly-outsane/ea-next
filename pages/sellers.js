@@ -16,11 +16,12 @@ import Footer from "../components/Footer";
 import BottomCTA from "../components/BottomCTA";
 import Button from "../components/PrimaryButton";
 import InfoGraphic from "../components/InfoGraphic";
+import TransactionCard from "../components/TransactionCard";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
-const Sellers = () => {
+const Sellers = ({ sellersTransactions }) => {
   const swiperRef = React.useRef(null);
 
   const CharacteristicsCard = ({ text }) => {
@@ -159,9 +160,9 @@ const Sellers = () => {
               </h2>
             </div>
             <div className='points mt-16 self-center'>
-              <div className='flex items-center gap-10'>
+              <div className='flex flex-col lg:flex-row items-center gap-10'>
                 <div
-                  className={`${styles["why-section__info-card"]} flex flex-col points-safari-gap`}
+                  className={`${styles["why-section__info-card"]} flex flex-col ${styles["why-section__safari-gap"]}`}
                 >
                   <h2 className='capitalize'> Sell for more </h2>
                   <p>
@@ -175,7 +176,7 @@ const Sellers = () => {
                   </p>
                 </div>
                 <div
-                  className={`${styles["why-section__green-circle"]} bg-brand-green rounded-full flex items-center justify-center points-safari-gap`}
+                  className={`${styles["why-section__green-circle"]} bg-brand-green rounded-full flex items-center justify-center ${styles["why-section__safari-gap"]}`}
                 >
                   <Image
                     width={28}
@@ -185,7 +186,7 @@ const Sellers = () => {
                   />
                 </div>
                 <div
-                  className={`${styles["why-section__info-card"]} flex flex-col points-safari-gap`}
+                  className={`${styles["why-section__info-card"]} flex flex-col ${styles["why-section__safari-gap"]}`}
                 >
                   <h2 className='capitalize'> Sell quickly </h2>
                   <p>
@@ -203,11 +204,166 @@ const Sellers = () => {
           </div>
         </section>
 
+        <section
+          className={`${styles["transactions-section"]}  w-full flex justify-center items-center pb-24 pt-16 px-8  `}
+        >
+          <div className='container mx-auto grid lg:flex justify-center items-center'>
+            <div className='basis-2/3 swiper-container pt-6 lg:pt-0'>
+              <div
+                className={`${styles["transactions-section__carousel"]} flex justify-end lg:mr-16 relative items-center`}
+              >
+                <Swiper
+                  loop={true}
+                  loopedSlides={5}
+                  breakpoints={{
+                    320: {
+                      centeredSlides: true,
+                      centeredSlidesBounds: true,
+                    },
+                    1024: {
+                      centeredSlides: false,
+                      centeredSlidesBounds: false,
+                    },
+                  }}
+                  observer={true}
+                  init={false}
+                  watchSlidesProgress={true}
+                  slidesPerView={"auto"}
+                  spaceBetween={30}
+                  ref={swiperRef}
+                  className='w-full'
+                  initialSlide={3}
+                  navigation={{
+                    prevEl: `.transactions-section__prev`,
+                    nextEl: `.transactions-section__next`,
+                  }}
+                  // onSetTranslate={(swiper, translate) => {
+                  //   console.log(translate);
+                  // }}
+                  // onSlideChange={(i) => console.log("slide change", i.activeIndex)}
+                >
+                  {sellersTransactions.map((transaction, i) => {
+                    return (
+                      <SwiperSlide
+                        key={transaction.name}
+                        className='swiper-slide-animated'
+                      >
+                        <TransactionCard {...transaction} />
+                      </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
+                <div
+                  className={`${styles["transactions-section__next"]} transactions-section__next cursor-pointer ml-8`}
+                >
+                  <div
+                    className='bg-brand-green rounded-full flex justify-center items-center'
+                    style={{ width: 70, height: 70 }}
+                  >
+                    <Image
+                      width={24}
+                      height={24}
+                      src='/svgs/right-arrow.svg'
+                      alt='right arrow'
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`${styles["transactions-section__prev-wrapper"]} absolute left-0 z-10 h-full flex items-center pl-10 pr-20`}
+                >
+                  <div className={`transactions-section__prev cursor-pointer `}>
+                    <div
+                      className='bg-brand-green rounded-full flex justify-center items-center'
+                      style={{ width: 70, height: 70 }}
+                    >
+                      <Image
+                        width={24}
+                        height={24}
+                        src='/svgs/left-arrow.svg'
+                        alt='left arrow'
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='basis-1/3'>
+              <div className='flex flex-col justify-between fade-in-section'>
+                <h2 className='capitalize' style={{ maxWidth: 478 }}>
+                  Our Elite Agents Are Waiting To Sell Your Home
+                </h2>
+                <p>
+                  You&apos;ve decided to sell your home. Let us help you find
+                  the perfect real estate agent based on their actual
+                  performance. Effective Agents has analyzed over 1.5 million
+                  agents in the United States.
+                </p>
+                <span style={{ width: 220 }}>
+                  <Button text='Find an agent' />
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <BottomCTA />
         <Footer />
       </main>
     </div>
   );
 };
+
+export async function getStaticProps(context) {
+  const sellersTransactions = [
+    {
+      price: "$1,200,000",
+      special_tag: "",
+      date: "11/30/2021",
+      name: "Bryan Huff",
+      city: "Leawood",
+      state: "KS",
+      house: "Leawood.jpg",
+    },
+    {
+      price: "$1,198,000",
+      special_tag: "",
+      date: "1/19/2021",
+      name: "Stacy Esser",
+      city: "Cresskill",
+      state: "NJ",
+      house: "Wilson Dr, Cresskill.png",
+    },
+    {
+      price: "$3,200,000",
+      special_tag: "",
+      date: " 2/02/2022",
+      name: "Hedda Parashos",
+      city: "San Diego",
+      state: "CA",
+      house: "Ocean Front Walk, San Diego, CA.png",
+    },
+    {
+      price: "$1,000,000",
+      special_tag: "Sold in 6 days",
+      date: "7/28/2021  ",
+      name: "Julia Runyan",
+      city: "Gig Harbor",
+      state: "WA",
+      house: "Gig Harbor, WA.png",
+    },
+    {
+      price: "$2,200,000",
+      special_tag: "Sold in 6 days",
+      date: " 8/20/2021",
+      name: "Tom Ruch",
+      city: " Bethany Beach ",
+      state: "DE",
+      house: "Bethany Beach, DE.webp",
+    },
+  ];
+  return {
+    props: { sellersTransactions }, // will be passed to the page component as props
+  };
+}
 
 export default Sellers;
