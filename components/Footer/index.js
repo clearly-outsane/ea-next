@@ -232,8 +232,8 @@ const Footer = () => {
           <div className='hidden lg:flex lg:gap-8 '>
             <Image
               src='/svgs/socials/Facebook.svg'
-              width={18}
-              height={18}
+              width={14}
+              height={14}
               alt='facebook icon'
             />
             <Image

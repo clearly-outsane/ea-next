@@ -205,7 +205,7 @@ const FindAgentForm = () => {
             <div className={`${styles["hero-form__input-wrapper"]}`}>
               <Autocomplete
                 ref={inputRef}
-                type='number'
+                // type='number'
                 id='zipCode'
                 autoComplete={off}
                 name='Zip-Code-Buyer'
