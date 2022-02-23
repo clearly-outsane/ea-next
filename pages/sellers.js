@@ -17,6 +17,7 @@ import BottomCTA from "../components/BottomCTA";
 import Button from "../components/PrimaryButton";
 import InfoGraphic from "../components/InfoGraphic";
 import TransactionCard from "../components/TransactionCard";
+import CustomerReviewCard from "../components/CustomerReviewCard";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -27,17 +28,16 @@ const Sellers = ({ sellersTransactions }) => {
   const CharacteristicsCard = ({ text }) => {
     return (
       <div
-        className='characteristics-card py-8 px-10 flex items-center w-full'
+        className={`${styles["characteristics-card"]} py-8 px-10 flex items-center w-full`}
         style={{ minHeight: 115 }}
       >
         <Image
-          width={24}
-          height={24}
+          width={20}
+          height={20}
           src='/svgs/green-tick.svg'
           alt='checkmark icon'
         />
-        {/* <GreenTick /> */}
-        <p className='mb-0 pl-6'>{text}</p>
+        <p className='mb-0 pl-6 flex-1'>{text}</p>
       </div>
     );
   };
@@ -376,6 +376,94 @@ const Sellers = ({ sellersTransactions }) => {
                   Call (855) 472-9275
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className={`${styles["characteristics-section"]} w-full flex justify-center items-center pb-24 pt-16 px-8 relative`}
+          // style={{ backgroundImage: `url(${housebgtwo})` }}
+        >
+          <Image
+            objectPosition='bottom'
+            layout='fill'
+            src='/svgs/house-bg-2.svg'
+            alt=''
+            objectFit='contain'
+            className={`${styles["characteristics-section__bg-image"]}`}
+          />
+          <div className='container mx-auto flex flex-col justify-center items-center'>
+            <h2 style={{ maxWidth: 730 }} className='text-center'>
+              What characteristics should you look for in a great real estate
+              agent?
+            </h2>
+            <p style={{ maxWidth: 720 }} className='text-center pt-1'>
+              The best listing agents don&apos;t just post your home for sale
+              online, snap a few pictures and call it a day; they maximize your
+              odds of getting multiple offers as quickly as possible. You should
+              expect the following level of service from our agents:
+            </p>
+            <div
+              className={`${styles["characteristics-section__cards"]} pt-20 w-full grid grid-cols-3 gap-10`}
+            >
+              <div className='flex flex-col gap-8 pt-32'>
+                <CharacteristicsCard text='In-depth market analysis and an explanation of their pricing strategy' />
+                <CharacteristicsCard text='Your listing syndicated to all major online home search websites' />
+                <CharacteristicsCard text='Near immediate response turnaround time on client requests' />
+                <CharacteristicsCard text='Well written ad-copy and a thorough and accurate listing description' />
+              </div>
+              <div className='flex flex-col gap-8 pt-16'>
+                <CharacteristicsCard text='Advertising in relevant local publications' />
+                <CharacteristicsCard text='Access to home staging and design consultants' />
+                <CharacteristicsCard text='Professional photography' />
+                <CharacteristicsCard text='Customized, property specific, marketing flyers' />
+              </div>
+              <div className='flex flex-col gap-8'>
+                <CharacteristicsCard text='Development of virtual tours (high-end properties)' />
+                <CharacteristicsCard text='Exclusive previews for other real estate brokers' />
+                <CharacteristicsCard text='Access and monitoring of your private lock-box' />
+                <CharacteristicsCard text='Access and monitoring of your private lock-box' />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className={`${styles["stories-section"]} w-full flex justify-center items-center pb-24 pt-36 px-8`}
+        >
+          <div className='container mx-auto flex flex-col justify-center items-center'>
+            <h2 style={{ maxWidth: 500 }}>What Our Customers Say</h2>
+            <p className='text-center' style={{ maxWidth: 458 }}>
+              Meet some of our customers, read their stories, and imagine what
+              EffectiveAgents® can do for you.
+            </p>
+            <div className='container mx-auto flex flex-col lg:flex-row justify-center items-stretch content-center pt-6'>
+              <CustomerReviewCard
+                name='Pete D******'
+                review="I couldn't decide which agent that I should hire so I researched many
+          local agents online. Eventually I found effective agents and they were
+          very helpful. We put our house up for sale last week and have already
+          gotten multiple offers and are deciding which offer is best. This
+          saved me a lot of time and the agents really are effective!"
+                date='A month ago in Tampa, FL.'
+                source='See review on ShopperApproved'
+              />
+
+              <CustomerReviewCard
+                name='Peggy C****'
+                review='I live in Texas and was concerned about finding a realtor to
+            sell a property out of state. Mr. Howard Jefferson did a great
+            job from the very beginning of listing the property to the sale.
+            He knew the market and offered great advice. I was very grateful
+            for his integrity and knowledge.'
+                date='A week ago in Austin, TX.'
+                source='See review on ShopperApproved'
+              />
+            </div>
+            <div
+              className={`${styles["stories-section__btn-container"]} py-20`}
+            >
+              <Button text='View all Reviews' />
             </div>
           </div>
         </section>

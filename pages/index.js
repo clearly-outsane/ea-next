@@ -287,7 +287,7 @@ export default function Home() {
         <section
           className={`${styles["stories-section"]} w-full px-5 lg:px-8 `}
         >
-          <div className='container mx-auto flex flex-col justify-center items-center content-center top-content'>
+          <div className='container mx-auto flex flex-col justify-center items-center content-center'>
             <h2>What Our Customers Say</h2>
             <p className='text-center'>
               Meet some of our customers, read their stories, and <br /> imagine

@@ -31,13 +31,13 @@ const CustomerReviewCard = ({ review, date, name, source, border = true }) => {
         <p>{review}</p>
 
         <div className='flex  items-center justify-between'>
-          <h5>{name}</h5>
-          <div className='flex flex-row justify-between items-center'>
+          <div className='flex flex-col'>
+            <h5>{name}</h5>
             <a>{source}</a>
-            <p className={`${styles["story-card__post-time"]}`}>
-              <i>{date}</i>
-            </p>
           </div>
+          <p className={`${styles["story-card__post-time"]}`}>
+            <i>{date}</i>
+          </p>
         </div>
       </div>
     </a>
