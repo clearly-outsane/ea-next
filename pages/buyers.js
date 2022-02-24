@@ -476,7 +476,7 @@ export async function getStaticProps(context) {
       name: "Vlatka Bathgate",
       city: "Orindam",
       state: "CA",
-      house: "Orindam, CA",
+      house: "Orindam, CA.webp",
     },
     {
       price: " $2,900,000",
@@ -485,7 +485,7 @@ export async function getStaticProps(context) {
       name: "Annabel Taylor",
       city: "Hillsdale",
       state: "NY",
-      house: "Hillsdale, NY",
+      house: "Hillsdale, NY.webp",
     },
     {
       price: "$1,200,000",
@@ -494,7 +494,7 @@ export async function getStaticProps(context) {
       name: "Mary Ellen Vanaken",
       city: "Alpharetta",
       state: "GA",
-      house: "Ocean Front Walk, San Diego, CA",
+      house: "Ocean Front Walk, San Diego, CA.png",
     },
     {
       price: "$2,400,000",
@@ -503,7 +503,7 @@ export async function getStaticProps(context) {
       name: "Karen Degney",
       city: "Reno",
       state: "NV",
-      house: "Reno, NV",
+      house: "Reno, NV.webp",
     },
   ];
   return {
