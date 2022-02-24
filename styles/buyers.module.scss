@@ -1,0 +1,241 @@
+.hero-section {
+  padding-top: 88px;
+  min-height: 800px;
+  &__left {
+    height: 633px;
+    border-radius: 0px 30px 30px 0px;
+  }
+  @media (max-width: 1024px) {
+    &__left {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media (min-width: 991px) {
+    &__left {
+      width: 50vw; //todo
+    }
+  }
+  @media (min-width: 1024px) {
+    &__left {
+      margin-left: calc(-100vw / 2 + 1024px / 2);
+    }
+  }
+  @media (min-width: 1280px) {
+    &__left {
+      margin-left: calc(-100vw / 2 + 1280px / 2);
+    }
+  }
+  @media (min-width: 1536px) {
+    &__left {
+      margin-left: calc(-100vw / 2 + 1536px / 2);
+    }
+  }
+}
+
+.why-section {
+  &__info-card {
+    border: 2px solid #ecf6fa;
+    box-sizing: border-box;
+    border-radius: 30px;
+    max-width: 610px;
+    width: 100%;
+    padding: 40px;
+    @media (min-width: 1024px) {
+      max-width: 100%;
+    }
+    @media (max-width: 1024px) {
+      padding: 25px;
+    }
+  }
+  &__green-circle {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+  }
+  &__safari-gap {
+    @media (max-width: 1024px) {
+      @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+.transactions-section {
+  @media (max-width: 1024px) {
+    padding-top: 0;
+  }
+  .swiper-container {
+    @media (max-width: 1024px) {
+      grid-row: 2;
+    }
+  }
+
+  &__carousel {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  &__next-wrapper {
+    background: linear-gradient(
+      -90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  &__next-wrapper,
+  &__next {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    &__carousel {
+      left: initial;
+      right: initial;
+      margin-left: 64px;
+      width: initial;
+      margin-right: calc(-100vw / 2 + 1024px / 2);
+    }
+    &__next {
+      display: initial;
+    }
+    &__next-wrapper {
+      display: flex;
+    }
+  }
+  @media (min-width: 1280px) {
+    &__carousel {
+      margin-right: calc(-100vw / 2 + 1280px / 2);
+    }
+  }
+  @media (min-width: 1536px) {
+    &__carousel {
+      margin-right: calc(-100vw / 2 + 1536px / 2);
+    }
+  }
+}
+
+.speak-section {
+  @media (max-width: 1024px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__bg-image {
+    z-index: -2;
+  }
+
+  &__content {
+    border-radius: 30px;
+    margin-left: 15%;
+
+    @media (max-width: 1024px) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      margin-left: 0;
+    }
+
+    > div:nth-child(3) {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+    > div:nth-child(4) {
+      @media (max-width: 1024px) {
+        margin: 25px;
+      }
+    }
+  }
+
+  &__call-card {
+    width: 31%;
+    margin-right: -30%;
+    border-radius: 30px;
+    @media (max-width: 1024px) {
+      margin: 0;
+      width: 100%;
+      height: 400px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &__agent-image {
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  &__overlay {
+    @media (max-width: 1024px) {
+      padding: 15px;
+    }
+  }
+
+  &__button-label {
+    font-size: 14px;
+    background: #ffffff;
+    border-radius: 10px 0px 0px 10px;
+    color: #545454;
+    @media (max-width: 1024px) {
+      font-size: 12px;
+    }
+  }
+  &__button-container {
+    &:hover {
+      .speak-section__button {
+        background: #82bc1e;
+      }
+    }
+  }
+  &__button {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    background: #174888;
+    border-radius: 0px 10px 10px 0px;
+    @media (max-width: 1024px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.characteristics-section {
+  &__bg-image {
+    z-index: -1;
+  }
+  &__cards {
+    @media (max-width: 1024px) {
+      display: block;
+      padding-top: 50px;
+    }
+    > div {
+      @media (max-width: 1024px) {
+        padding-top: 0;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.stories-section {
+  @media (max-width: 1024px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__btn-container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.characteristics-card {
+  background: #ffffff;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+}
