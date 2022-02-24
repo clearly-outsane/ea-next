@@ -50,7 +50,7 @@ const Buyers = ({ buyersTransactions }) => {
           name='description'
           content='Find Top Realtors Near you | Based on 2021 Sales data'
         />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon.png' />
       </Head>
       <Header />
       <main>
