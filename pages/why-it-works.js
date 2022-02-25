@@ -469,6 +469,73 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
             </div>
           </div>
         </section>
+        <section
+          className={`${styles["algorithm-section"]} w-full flex justify-center content-center px-8 mt-32 relative overflow-hidden`}
+        >
+          {/* <StaticImage
+          style={{ position: "absolute" }} //this is to override styling in production build
+          quality={90}
+          className='absolute w-full top-0 bottom-0 left-0 right-0'
+          alt=''
+          src={"../assets/images/map-gray.jpg"}
+        /> */}
+          <Image
+            src='/images/light-blue-roads.jpg'
+            layout='fill'
+            objectFit='cover'
+            alt=''
+          />
+          <div className='blend-overlay container mx-auto flex flex-col items-center'>
+            <div
+              className={`${styles["algorithm-section__wrapper"]} relative flex flex-col justify-center w-full h-full my-36`}
+            >
+              <h2 className='capitalize'>Our algorithm</h2>
+              <div
+                className={`${styles["algorithm-section__content"]} w-full mt-5 flex items-stretch`}
+              >
+                <div
+                  className={`p-10 flex flex-col bg-white ${styles["algorithm-section__left-content"]}`}
+                >
+                  <h5>Logic</h5>
+                  <p>
+                    Since 2009 we have actively worked to perfect our systems,
+                    along the way we have learned a lot about what makes top
+                    real estate agents outperform their peers. The data-points
+                    and methodologies explained above are weighted, some get
+                    more consideration than others. We are constantly testing
+                    and tweaking so that our systems are optimized for the next
+                    ten years – no matter the market conditions.
+                  </p>
+                  <div style={{ maxWidth: 220 }} className='mt-16'>
+                    <Button
+                      text='Find an agent'
+                      href='https://www.effectiveagents.com/sellers/?c1=a'
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`bg-brand-blue  ${styles["algorithm-section__right-content"]} grow p-10 flex flex-col`}
+                >
+                  <h5>Results</h5>
+                  <div>
+                    <h2
+                      className='font-normal text-white'
+                      style={{ lineHeight: "160%" }}
+                    >
+                      In 2020, homeowners that used our service to sell their
+                      homes beat the national average home sale price by
+                    </h2>
+                    <div
+                      className={`w-full text-right ${styles["algorithm-section__large-number"]}  text-brand-green`}
+                    >
+                      $41,693
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

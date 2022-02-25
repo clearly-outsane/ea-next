@@ -212,3 +212,31 @@
     }
   }
 }
+
+.algorithm-section {
+  @media (max-width: 990px) {
+    margin-top: 0;
+  }
+  &__large-number {
+    font-size: 90px;
+    @media (max-width: 990px) {
+      font-size: 48px;
+      text-align: left;
+    }
+  }
+  &__wrapper {
+    @media (max-width: 990px) {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+  &__left-content,
+  &__right-content {
+    min-width: 50%;
+  }
+  &__content {
+    @media (max-width: 990px) {
+      flex-direction: column;
+    }
+  }
+}

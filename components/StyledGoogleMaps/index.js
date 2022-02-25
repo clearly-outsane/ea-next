@@ -26,6 +26,7 @@ const GoogleMaps = ({
       styles: [...mapsStyleArray],
       zoomControl: false,
       fullscreenControl: false,
+      disableDefaultUI: true,
     };
   };
 
@@ -60,7 +61,7 @@ const GoogleMaps = ({
       <GoogleMapReact
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
-        bootstrapURLKeys={{ key: "AIzaSyAP4AJKi5yd5cXWRTS6JMlBFeSSA7VgHkE" }}
+        bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GMAPS_API_KEY }}
         draggable={false}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
