@@ -76,3 +76,139 @@
     transform: translate(-40px, 40px);
   }
 }
+
+.data-section {
+  &__background-gradient {
+    background: linear-gradient(
+      180deg,
+      #ecf6fa 0%,
+      rgba(236, 246, 250, 0) 100%
+    );
+    height: 970.18px;
+  }
+  &__down-arrow {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.data-card {
+  max-width: 1337.75px;
+  height: 640px;
+  &__left {
+    border-radius: 30px;
+  }
+  &__number {
+    font-size: 16px;
+    color: #545454;
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 1px;
+  }
+  &__subtitle {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+}
+
+.left-01 {
+  &__bg-image {
+    z-index: -10;
+  }
+  &__overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &__label-container {
+    border-radius: 10px;
+  }
+  &__label {
+    font-size: 14px;
+    color: #545454;
+  }
+  &__map-stack {
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      height: 100%;
+    }
+    &__profile-container {
+      width: 100%;
+      padding: 25px;
+    }
+  }
+}
+.left-03 {
+  @media (max-width: 990px) {
+    .overflow-hidden {
+      border-radius: 20px !important;
+    }
+  }
+}
+.left-04 {
+  &__overlay {
+    background: rgba(18, 137, 174, 0.24);
+  }
+  &__label-container {
+    border-radius: 10px;
+  }
+  &__label {
+    font-size: 14px;
+    color: #545454;
+  }
+  &__map-stack {
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      height: 100%;
+    }
+    &__profile-container {
+      width: 100%;
+      padding: 25px;
+    }
+  }
+}
+.left-05 {
+  &__grid {
+    grid-template-rows: 1fr 1fr;
+  }
+  //   @media (max-width: 1024px) {
+  //     .bg-brand-blue {
+  //       .pt-6 {
+  //         padding-top: 10px;
+  //       }
+  //       .overflow-hidden {
+  //         width: 50px !important;
+  //         height: 50px !important;
+  //       }
+  //       .text-white {
+  //         &:nth-child(1) {
+  //           font-size: 14px !important;
+  //         }
+  //         &:nth-child(2) {
+  //           font-size: 10px !important;
+  //         }
+  //       }
+  //     }
+  //   }
+  &__info {
+    background: #1289ae;
+    @media (max-width: 1024px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  &__top-text {
+    font-size: 18px;
+    @media (max-width: 1024px) {
+      font-size: 12px;
+    }
+  }
+  &__number {
+    letter-spacing: 1px;
+    font-size: 36px;
+    @media (max-width: 1024px) {
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+  }
+}

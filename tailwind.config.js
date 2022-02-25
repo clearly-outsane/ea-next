@@ -12,6 +12,8 @@ module.exports = {
       },
       colors: {
         "brand-green": "#82BC1E",
+        "brand-red": "#CB0000",
+        "brand-blue": "#174888",
         "light-blue-background": "#ECF6FA",
         "blue-divide-color": "#062E63",
       },

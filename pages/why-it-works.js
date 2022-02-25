@@ -10,8 +10,291 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/PrimaryButton";
 import AgentCard from "../components/AgentCard";
+import InfoGraphic from "../components/InfoGraphic";
+import GoogleMaps from "../components/StyledGoogleMaps";
 
-const WhyItWorks = ({ bestAgents }) => {
+const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
+  const DataCard = ({
+    number,
+    title,
+    subtitle1,
+    content1,
+    subtitle2,
+    content2,
+  }) => {
+    const LeftSide = () => {
+      if (number === "01")
+        return (
+          <div
+            className={`${styles["left-01"]} w-full h-full flex items-end ${styles["data-card__left"]} overflow-hidden relative webkit-rounded-full`}
+          >
+            <Image
+              layout='fill'
+              objectFit='cover'
+              src='/images/stock/ladderInHouse.jpg'
+              alt=''
+              className={`${styles["left-01__bg-image"]}`}
+            />
+
+            <div
+              className={`${styles["left-01__overlay"]}  absolute top-0 bottom-0 left-0 right-0 -z-10`}
+            />
+            <div
+              className={`${styles["left-01__map-stack"]}  w-full flex justify-between`}
+            >
+              <div className='p-12 profile-container'>
+                {/* <SmallProfile name='Julia Runyan' city='Gig Harbor' state='WA' /> */}
+              </div>
+              <div className='p-12'>
+                <div
+                  className={`bg-white p-5 flex items-center ${styles["left-01__label-container"]}`}
+                >
+                  <div className={`${styles["left-01__label"]} pr-2`}>
+                    Sold in <strong>6 days</strong>
+                  </div>
+                  <div>
+                    <Image
+                      width={24}
+                      height={24}
+                      src='/svgs/calender-icon.svg'
+                      alt='calender icon'
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      if (number === "02")
+        return (
+          <div
+            className={`${styles["left-02"]} w-full h-full bg-light-blue-background ${styles["data-card__left"]} overflow-hidden  webkit-rounded-full`}
+          >
+            <InfoGraphic
+              number='104%'
+              numberText='Sold 4% Over Asking Price'
+              showProfile={true}
+              {...bestAgents[2]}
+            />
+          </div>
+        );
+
+      if (number === "03") {
+        let images = [];
+        for (let i = 1; i <= 9; i++) {
+          images.push(
+            <div
+              style={{ borderRadius: 30 }}
+              className={`overflow-hidden webkit-rounded-full ${styles["left-03__image-container"]} relative`}
+            >
+              <Image
+                layout='fill'
+                objectFit='cover'
+                src={`/images/stock/house-${i}.jpg`}
+                alt=''
+              />
+            </div>
+          );
+        }
+        return (
+          <div
+            className={`${styles["left-03"]}  w-full h-full grid grid-cols-3 gap-5`}
+          >
+            {images}
+          </div>
+        );
+      }
+
+      if (number === "04")
+        return (
+          <div
+            className={`${styles["left-04"]}  w-full h-full ${styles["data-card__left"]} relative overflow-hidden webkit-rounded-full`}
+          >
+            <div className='w-full h-full'>
+              <GoogleMaps
+                center={{ lat: 33.4484, lng: -112.074 }}
+                mapsStyleArray={mapsStyleArray}
+              />
+              <div
+                className={`absolute top-0 bottom-0 left-0 right-0 ${styles["left-04__overlay"]} `}
+              >
+                <div
+                  className={`${styles["left-04__map-stack"]} w-full h-full flex justify-between items-end`}
+                >
+                  <div
+                    className={`p-12 ${styles["left-04__profile-container"]}`}
+                  >
+                    {/* <SmallProfile name='Bruno Arapovic' /> */}
+                  </div>
+                  <div className='p-12'>
+                    <div
+                      className={`bg-white p-5 flex items-center ${styles["left-04__label-container"]}`}
+                    >
+                      <div className={`${styles["left-04__label"]} pr-2`}>
+                        Sold in <strong>47 days</strong>
+                      </div>
+                      <div>
+                        <Image
+                          width={24}
+                          height={24}
+                          src='/svgs/calender-icon.svg'
+                          alt='calender icon'
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      if (number === "05")
+        return (
+          <div
+            className={` ${styles["left-05"]} w-full h-full ${styles["data-card__left"]} overflow-hidden `}
+          >
+            <div
+              className={`${styles["left-05__grid"]} w-full h-full grid grid-cols-2 gap-5`}
+            >
+              <div
+                style={{ borderRadius: 30 }}
+                className='overflow-hidden webkit-rounded-full relative'
+              >
+                <Image
+                  layout='fill'
+                  objectFit='cover'
+                  src={`/images/stock/house-${2}.jpg`}
+                  alt=''
+                />
+              </div>
+              <div
+                style={{ borderRadius: 30 }}
+                className='overflow-hidden bg-brand-blue flex justify-center items-center'
+              >
+                <div className='flex flex-col items-center'>
+                  <div
+                    style={{ width: 140, height: 140 }}
+                    className='overflow-hidden rounded-full webkit-rounded-full'
+                  >
+                    {/* <StaticImage
+                          className=' w-full h-full'
+                          alt='Jane profile pic'
+                          src={"../assets/images/best-agents/Andy Peters.jpg"}
+                        /> */}
+                  </div>
+                  <div className='pt-6'>
+                    <div
+                      className={` text-white  font-bold`}
+                      style={{ fontSize: 18 }}
+                    >
+                      Andy Peters
+                    </div>
+                    <div
+                      className={` text-white  italic text-center`}
+                      style={{ fontSize: 13 }}
+                    >
+                      Atlanta, GA
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{ borderRadius: 30 }}
+                className={`overflow-hidden ${styles["left-05__info"]} `}
+              >
+                <div className=' flex flex-col justify-center items-center h-full w-full'>
+                  <div
+                    className={`text-center text-white font-bold ${styles["left-05__top-text"]}`}
+                  >
+                    Specializes in home <br /> with a value between.
+                  </div>
+                  <div
+                    className={`text-center text-white font-bold ${styles["left-05__number"]}  pt-2`}
+                  >
+                    $425k-$780k
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{ borderRadius: 30 }}
+                className='overflow-hidden webkit-rounded-full relative'
+              >
+                <Image
+                  layout='fill'
+                  objectFit='cover'
+                  src={`/images/stock/house-${6}.jpg`}
+                  alt=''
+                />
+              </div>
+            </div>
+          </div>
+        );
+
+      if (number === "06")
+        return (
+          <div
+            className={`${styles["left-06"]} w-full h-full ${styles["data-card__left"]} overflow-hidden relative webkit-rounded-full`}
+          >
+            <Image
+              layout='fill'
+              objectFit='cover'
+              src={`/images/stock/guyOnLaptop.jpg`}
+              alt=''
+            />
+          </div>
+        );
+
+      if (number === "07")
+        return (
+          <div
+            className={`left-07 w-full h-full bg-light-blue-background ${styles["data-card__left"]} overflow-hidden webkit-rounded-full`}
+          >
+            <InfoGraphic
+              number='341'
+              numberText='Successful Transactions'
+              showProfile={true}
+              {...bestAgents[5]}
+            />
+          </div>
+        );
+      return <div>This shouldn&apos;t be blank</div>;
+    };
+    return (
+      <div className={`${styles["data-card"]} w-full h-full flex items-center`}>
+        <div className='basis-1/2 w-full h-full relative '>
+          <LeftSide />
+        </div>
+        <div className='basis-1/2 right pl-20 flex flex-col'>
+          <div className={`${styles["data-card__number"]}  font-bold`}>
+            {number}{" "}
+          </div>
+          <div className={`${styles["data-card__title"]} font-bold mt-5`}>
+            {title}{" "}
+          </div>
+          <div
+            className={`${styles["data-card__subtitle"]}  text-brand-green font-bold uppercase mt-12 mb-3`}
+          >
+            {subtitle1}
+          </div>
+          <p style={{ marginBottom: 0 }}>{content1}</p>
+          <div
+            className={`${styles["data-card__subtitle"]} text-brand-green font-bold uppercase pt-6 mb-3`}
+          >
+            {subtitle2}
+          </div>
+          <p>{content2}</p>
+          <div style={{ maxWidth: 220 }}>
+            <Button
+              href='https://www.effectiveagents.com/sellers/?c1=a'
+              text='Find an agent'
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
       <Head>
@@ -90,6 +373,98 @@ const WhyItWorks = ({ bestAgents }) => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className={`${styles["data-section"]} w-full flex justify-center content-center px-8 mt-32 relative overflow-hidden`}
+        >
+          <div
+            className={`absolute top-0 left-0 right-0 ${styles["data-section__background-gradient"]} -z-10`}
+          >
+            <div className='top-0'>
+              <Image
+                src='/svgs/shape4.svg'
+                layout='fill'
+                objectPosition='center -350px'
+                alt=''
+              />
+              {/* <Shape4 style={{ width: "105%" }} /> */}
+            </div>
+          </div>
+          <div className='container mx-auto flex flex-row justify-center content-center'>
+            <div className='flex flex-col items-center w-full '>
+              <h1 className='mt-36'>The data we care about! </h1>
+              <div
+                className={`${styles["data-section__down-arrow"]}  mt-10 rounded-full bg-brand-green flex justify-center items-center`}
+              >
+                <Image
+                  src='/svgs/arrow-down.svg'
+                  width={24}
+                  height={24}
+                  alt='arrow down'
+                />
+              </div>
+              <div className='data-col mt-24 w-full flex flex-col items-center gap-32 mb-36'>
+                <DataCard
+                  number='01'
+                  title='Days On Market'
+                  subtitle1='What is it?'
+                  content1='Days on market (DOM) is the number of days from the date in which a property is listed for sale until the date when the seller accepts an offer on the property.'
+                  subtitle2='Why it moves the needle.'
+                  content2='Agents that get homes under contract quickly are motivated, they typically have a larger sphere of influence and are better connected than average agents.  These agents also tend to be more organized and effective at negotiating.'
+                />
+                <DataCard
+                  number='02'
+                  title='Sale-to-List Price Ratio'
+                  subtitle1='What is it?'
+                  content1='The sale-to-list price ratio is the final sale price divided by the last listing price for which the home was offered. '
+                  subtitle2='Why it matters.'
+                  content2='Top real estate agents that sell homes for more than “average” agents are keenly aware of local pricing trends…they are also excellent marketers that tend to emphasize providing high quality staging and photography.'
+                />
+                <DataCard
+                  number='03'
+                  title='Transaction Volume'
+                  subtitle1='What is it?'
+                  content1='Simply put, transaction volume is the number of transaction sides that an agent completes over a specified period of time.  We look at agent transaction volume over the last 12 months and over the agent’s lifetime.'
+                  subtitle2='Why it will improve your transaction.'
+                  content2='Being a good real estate agent doesn’t tend to come naturally.  Every transaction carries with it a unique set of barriers that the agent must overcome.  Agents that sell a lot of homes have overcome a tremendous number of transaction obstacles.'
+                />
+                <DataCard
+                  number='04'
+                  title='Geographic Competency'
+                  subtitle1='What is it?'
+                  content1='Successful Realtors® tend to focus on specific market areas. This is obvious when you consider how difficult it would be for an agent to sell homes that are not conveniently located to the where the agent resides.'
+                  subtitle2='Why it’s relevant. '
+                  content2='When we make a match it’s critical that the agent is experienced selling homes just like yours.  We go to great lengths to connect top agents to homeowners based on a variety of datapoints – but having a strong focus on the geographic dispersion of past sales is paramount.'
+                />
+                <DataCard
+                  number='05'
+                  title='Price Range Parity'
+                  subtitle1='What is it?'
+                  content1='When two assets are roughly equal in value they are said to have parity. '
+                  subtitle2='Why it will improve your transaction.'
+                  content2='The value of your home matters because many top performing agents tend to work within defined home value ranges.  An extreme example of why this is an important consideration: You wouldn’t hire a luxury agent that sells multi-million dollar homes to sell a property worth substantially less.  That transaction isn’t going to go well for anyone.'
+                />
+
+                <DataCard
+                  number='06'
+                  title='Gated Systems'
+                  subtitle1='What is that?'
+                  content1='While any agent can apply for consideration, only agents that meet our exacting requirements are connected with our clients.'
+                  subtitle2='WHY IT MATTERS.'
+                  content2='Our objective is to consistently improve transaction outcomes.  By staying true to our production thresholds and quality benchmarks we consistently outperform “average” real estate agents year after year.  Since we manually review so many qualitative attributes we are frequently able to rule out anomalies. As an example, agents that work for home builders often have what appear to be fantastic track records – the problem is that they are sitting in a sales office in a new neighborhood selling a standardized product.  An agent like this wouldn’t make it past our research team.'
+                />
+                <DataCard
+                  number='07'
+                  title='Success Rates'
+                  subtitle1='What is that?'
+                  content1='An agent’s on platform success rate is critical to ensuring that they get the job done for you.'
+                  subtitle2='WHY IT MATTERS to you.'
+                  content2='Lets be honest, you aren’t on this website for fun – you’re here for help.  We track how well our agents engage with our clients, how frequently they are able to help them buy and sell and how quickly they get the job done.  This ensures that you get a motivated agents that’s ready to make your housing dreams come true.'
+                />
               </div>
             </div>
           </div>
@@ -250,8 +625,77 @@ export async function getStaticProps(context) {
     },
   ];
 
+  const mapsStyleArray = [
+    {
+      featureType: "all",
+      elementType: "geometry",
+      stylers: [
+        {
+          color: "#157395",
+        },
+      ],
+    },
+    {
+      featureType: "all",
+      elementType: "labels.text",
+      stylers: [
+        {
+          color: "#e0e0e0",
+        },
+      ],
+    },
+    {
+      featureType: "all",
+      elementType: "labels.text.stroke",
+      stylers: [
+        {
+          visibility: "off",
+        },
+      ],
+    },
+    {
+      featureType: "all",
+      elementType: "labels.icon",
+      stylers: [
+        {
+          visibility: "off",
+        },
+      ],
+    },
+    {
+      featureType: "landscape",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#3990b0",
+        },
+        {
+          visibility: "simplified",
+        },
+      ],
+    },
+    {
+      featureType: "road.highway",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#25586a",
+        },
+      ],
+    },
+    {
+      featureType: "water",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#52aacd",
+        },
+      ],
+    },
+  ];
+
   return {
-    props: { bestAgents }, // will be passed to the page component as props
+    props: { bestAgents, mapsStyleArray }, // will be passed to the page component as props
   };
 }
 
