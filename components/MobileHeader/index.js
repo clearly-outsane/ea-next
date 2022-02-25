@@ -109,7 +109,7 @@ const MobileHeader = () => {
             </li>
             <li
               className={`pt-8 ${styles["nav-container__list-item"]} ${
-                expanded ? "" : "pointer-events-none"
+                expanded ? " pointer-events-auto" : "pointer-events-none"
               }`}
               style={{ maxWidth: 220 }}
             >

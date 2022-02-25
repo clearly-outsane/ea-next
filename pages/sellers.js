@@ -56,7 +56,7 @@ const Sellers = ({ sellersTransactions }) => {
       <MobileHeader />
       <main>
         <section
-          className={`${styles["hero-section"]} w-full h-screen flex justify-center content-center px-8 overflow-hidden`}
+          className={`${styles["hero-section"]} w-full h-screen flex justify-center content-center px-5 lg:px-8 overflow-hidden`}
         >
           <div className='container mx-auto flex flex-col lg:flex-row justify-center content-center'>
             <div
@@ -156,7 +156,7 @@ const Sellers = ({ sellersTransactions }) => {
         </section>
 
         <section
-          className={`${styles["why-section"]} w-full flex flex-col justify-center items-center pb-24 pt-8 px-8 fade-in-section`}
+          className={`${styles["why-section"]} w-full flex flex-col justify-center items-center pb-24 pt-8 px-5 lg:px-8 fade-in-section`}
         >
           <div className='container mx-auto flex flex-col justify-center content-center '>
             <div style={{ maxWidth: 640 }} className='self-center'>
@@ -210,10 +210,12 @@ const Sellers = ({ sellersTransactions }) => {
         </section>
 
         <section
-          className={`${styles["transactions-section"]}  w-full flex justify-center items-center pb-24 pt-16 px-8  `}
+          className={`${styles["transactions-section"]}  w-full flex justify-center items-center pb-24 pt-16 px-5 lg:px-8  `}
         >
           <div className='container mx-auto grid lg:flex justify-center items-center'>
-            <div className='basis-2/3 swiper-container pt-6 lg:pt-0'>
+            <div
+              className={`basis-2/3 ${styles["transactions-section__carousel-wrapper"]} swiper-container pt-6 lg:pt-0`}
+            >
               <div
                 className={`${styles["transactions-section__carousel"]} flex justify-end lg:mr-16 relative items-center`}
               >
@@ -312,9 +314,9 @@ const Sellers = ({ sellersTransactions }) => {
         </section>
 
         <section
-          className={` ${styles["speak-section"]} w-full flex justify-center items-center pb-24 pt-16 px-8 `}
+          className={` ${styles["speak-section"]} w-full flex justify-center items-center pb-24 pt-16 px-5 lg:px-8 `}
         >
-          <div className='container mx-auto flex justify-center items-center'>
+          <div className='container mx-auto flex flex-col lg:flex-row justify-center items-center'>
             <div
               className={`${styles["speak-section__call-card"]}  self-stretch my-10 relative overflow-hidden webkit-rounded-full`}
             >
@@ -324,6 +326,7 @@ const Sellers = ({ sellersTransactions }) => {
                   layout='fill'
                   alt='bg image'
                   objectFit='cover'
+                  objectPosition={"top"}
                   className={`${styles["speak-section__agent-image"]}`}
                 />
               </div>
@@ -386,7 +389,7 @@ const Sellers = ({ sellersTransactions }) => {
         </section>
 
         <section
-          className={`${styles["characteristics-section"]} w-full flex justify-center items-center pb-24 pt-16 px-8 relative`}
+          className={`${styles["characteristics-section"]} w-full flex justify-center items-center pb-24 pt-16 px-5 lg:px-8 relative`}
           // style={{ backgroundImage: `url(${housebgtwo})` }}
         >
           <Image
@@ -434,7 +437,7 @@ const Sellers = ({ sellersTransactions }) => {
         </section>
 
         <section
-          className={`${styles["stories-section"]} w-full flex justify-center items-center pb-24 pt-36 px-8`}
+          className={`${styles["stories-section"]} w-full flex justify-center items-center pb-24 pt-36 px-5 lg:px-8`}
         >
           <div className='container mx-auto flex flex-col justify-center items-center'>
             <h2 style={{ maxWidth: 500 }}>What Our Customers Say</h2>

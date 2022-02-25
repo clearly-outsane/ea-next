@@ -9,12 +9,13 @@
   @media (max-width: 1024px) {
     height: auto;
     padding-top: 100px;
+    padding-bottom: 100px;
     &__right {
       width: 100%;
       position: relative;
       padding-top: 50px;
       padding-bottom: 50px;
-      margin-top: 50px;
+      margin-top: 40px;
       border-radius: 30px;
       margin-bottom: 0;
     }
@@ -93,7 +94,7 @@
   @media (max-width: 1024px) {
     padding-top: 0;
   }
-  .swiper-container {
+  &__carousel-wrapper {
     @media (max-width: 1024px) {
       grid-row: 2;
     }
