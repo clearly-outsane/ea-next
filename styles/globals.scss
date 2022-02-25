@@ -105,6 +105,107 @@ p,
   }
 }
 
+@media (max-width: 1280px) {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  p,
+  .p {
+    margin-bottom: 25px;
+  }
+
+  h1,
+  .h1 {
+    font-size: 44px;
+
+    sup {
+      font-size: 24px;
+    }
+  }
+
+  h2,
+  .h2 {
+    font-size: 28px;
+
+    sup {
+      font-size: 16px;
+    }
+  }
+
+  h4,
+  .h4 {
+    font-size: 16px;
+    sup {
+      font-size: 10px;
+    }
+  }
+
+  h5,
+  .h5 {
+    font-size: 12px;
+    sup {
+      font-size: 8px;
+    }
+  }
+
+  p,
+  .p {
+    font-size: 14px;
+    sup {
+      font-size: 6px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  p,
+  .p {
+    margin-bottom: 15px;
+  }
+
+  h1,
+  .h1 {
+    font-size: 28px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 18px;
+  }
+
+  h4,
+  .h4 {
+    font-size: 14px;
+  }
+
+  h5,
+  .h5 {
+    font-size: 10px;
+  }
+
+  p,
+  .p {
+    font-size: 12px;
+  }
+}
+
 // * {
 //   outline: 1px solid #f00 !important;
 // }
@@ -126,4 +227,48 @@ p,
 
 .swiper-slide.width-auto-important {
   width: auto !important;
+}
+
+//hamburger styles
+$stroke-wdith: 4;
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: $stroke-wdith;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: $stroke-wdith;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: $stroke-wdith;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: $stroke-wdith;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: $stroke-wdith;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: $stroke-wdith;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: $stroke-wdith;
 }

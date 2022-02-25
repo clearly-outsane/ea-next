@@ -11,13 +11,13 @@ import styles from "../styles/sellers.module.scss";
 
 //components
 import Header from "../components/Header";
-// import MobileHeader from "../components/mobile-header/index.js";
 import Footer from "../components/Footer";
 import BottomCTA from "../components/BottomCTA";
 import Button from "../components/PrimaryButton";
 import InfoGraphic from "../components/InfoGraphic";
 import TransactionCard from "../components/TransactionCard";
 import CustomerReviewCard from "../components/CustomerReviewCard";
+import MobileHeader from "../components/MobileHeader";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -45,7 +45,7 @@ const Sellers = ({ sellersTransactions }) => {
   return (
     <div>
       <Head>
-        <title>Effective Agents | Sellers |Find Top Realtors Near you </title>
+        <title>Effective Agents | Sellers | Find Top Realtors Near you </title>
         <meta
           name='description'
           content='Find Top Realtors Near you | Based on 2021 Sales data'
@@ -53,6 +53,7 @@ const Sellers = ({ sellersTransactions }) => {
         <link rel='icon' href='/favicon.png' />
       </Head>
       <Header />
+      <MobileHeader />
       <main>
         <section
           className={`${styles["hero-section"]} w-full h-screen flex justify-center content-center px-8 overflow-hidden`}
