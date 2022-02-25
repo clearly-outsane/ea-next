@@ -58,9 +58,11 @@ const Sellers = ({ sellersTransactions }) => {
         <section
           className={`${styles["hero-section"]} w-full h-screen flex justify-center content-center px-8 overflow-hidden`}
         >
-          <div className='container mx-auto flex flex-row justify-center content-center'>
-            <div className='hero-content flex flex-col basis-1/2 w-6/12 justify-center content-start items-start'>
-              <div className='mb-8'>
+          <div className='container mx-auto flex flex-col lg:flex-row justify-center content-center'>
+            <div
+              className={`${styles["hero-section__left"]} flex flex-col basis-1/2 w-6/12 justify-center content-start items-start`}
+            >
+              <div className='mb-6'>
                 <Image
                   src='/svgs/ea-icon.svg'
                   alt='Effective Agents Logo'
@@ -115,7 +117,9 @@ const Sellers = ({ sellersTransactions }) => {
                       />
                     </SwiperSlide>
                   </Swiper>
-                  <div className='absolute bottom-4 lg:bottom-12 lg:right-12 z-10 sellers-slide-nav-container'>
+                  <div
+                    className={`absolute bottom-4 lg:bottom-12 lg:right-12 z-10 ${styles["hero-section__slider-nav-container"]}`}
+                  >
                     <div className='flex flex-row gap-3 z-10'>
                       <div className='prev cursor-pointer'>
                         <div
