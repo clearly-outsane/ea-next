@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 import Button from "../components/PrimaryButton";
 import AgentCard from "../components/AgentCard";
 import InfoGraphic from "../components/InfoGraphic";
-import GoogleMaps from "../components/StyledGoogleMaps";
+// import GoogleMaps from "../components/StyledGoogleMaps";
 
 const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
   const DataCard = ({
@@ -111,9 +111,15 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
             className={`${styles["left-04"]}  w-full h-full ${styles["data-card__left"]} relative overflow-hidden webkit-rounded-full`}
           >
             <div className='w-full h-full'>
-              <GoogleMaps
+              {/* <GoogleMaps
                 center={{ lat: 33.4484, lng: -112.074 }}
                 mapsStyleArray={mapsStyleArray}
+              /> */}
+              <Image
+                layout='fill'
+                objectFit='cover'
+                src='/images/PhoenixMap.png'
+                alt='calender icon'
               />
               <div
                 className={`absolute top-0 bottom-0 left-0 right-0 ${styles["left-04__overlay"]} `}
