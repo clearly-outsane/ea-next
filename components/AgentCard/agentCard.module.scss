@@ -1,0 +1,67 @@
+.agent-card {
+  background: #174888;
+  width: 203.92px;
+  height: auto;
+
+  &__pic {
+    position: relative;
+    border-radius: 9999px;
+    overflow: hidden;
+    width: 61.75px;
+    height: 61.75px;
+    @media (min-width: 1024px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  @media (min-width: 640px) {
+    height: 460px;
+    width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 320px;
+  }
+
+  &__right-side-of-pic {
+    padding-left: 18px;
+    @media (min-width: 1024px) {
+      padding-left: 30px;
+    }
+  }
+
+  &__name {
+    @media (max-width: 640px) {
+      font-size: 14px;
+      line-height: initial;
+      max-width: 92px;
+    }
+  }
+  &__location {
+    @media (max-width: 640px) {
+      font-size: 10px;
+    }
+  }
+
+  &__stat {
+    @media (max-width: 640px) {
+      font-size: 10px;
+      font-weight: lighter;
+    }
+  }
+  &__stat-number {
+    @media (max-width: 640px) {
+      font-size: 18px;
+    }
+  }
+
+  &__button-text {
+    @media (max-width: 640px) {
+      font-size: 10px;
+    }
+  }
+}
+
+.agent-card--no-button {
+  height: 390px;
+}
