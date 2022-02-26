@@ -164,7 +164,7 @@ const Sellers = ({ sellersTransactions }) => {
                 Why Should you Sell Your Home Using Effective Agents?
               </h2>
             </div>
-            <div className='points mt-16 self-center'>
+            <div className='points mt-8 lg:mt-16 self-center'>
               <div className='flex flex-col lg:flex-row items-center gap-10'>
                 <div
                   className={`${styles["why-section__info-card"]} flex flex-col ${styles["why-section__safari-gap"]}`}
@@ -210,11 +210,11 @@ const Sellers = ({ sellersTransactions }) => {
         </section>
 
         <section
-          className={`${styles["transactions-section"]}  w-full flex justify-center items-center pb-24 pt-16 px-5 lg:px-8  `}
+          className={`${styles["transactions-section"]}  w-full flex justify-center items-center pb-28 lg:pb-24 pt-16 px-5 lg:px-8  `}
         >
           <div className='container mx-auto grid lg:flex justify-center items-center'>
             <div
-              className={`basis-2/3 ${styles["transactions-section__carousel-wrapper"]} swiper-container pt-6 lg:pt-0`}
+              className={`basis-2/3 ${styles["transactions-section__carousel-wrapper"]} swiper-container pt-10 lg:pt-0`}
             >
               <div
                 className={`${styles["transactions-section__carousel"]} flex justify-end lg:mr-16 relative items-center`}
@@ -295,7 +295,9 @@ const Sellers = ({ sellersTransactions }) => {
               </div>
             </div>
             <div className='basis-1/3'>
-              <div className='flex flex-col justify-between fade-in-section'>
+              <div
+                className={`flex flex-col justify-between fade-in-section ${styles["transactions-section__text-content"]}`}
+              >
                 <h2 className='capitalize' style={{ maxWidth: 478 }}>
                   Our Elite Agents Are Waiting To Sell Your Home
                 </h2>
@@ -305,7 +307,10 @@ const Sellers = ({ sellersTransactions }) => {
                   performance. Effective Agents has analyzed over 1.5 million
                   agents in the United States.
                 </p>
-                <span style={{ width: 220 }}>
+                <span
+                  style={{ width: 220 }}
+                  className={`${styles["transactions-section__cta"]}`}
+                >
                   <Button text='Find an agent' />
                 </span>
               </div>

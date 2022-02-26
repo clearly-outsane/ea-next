@@ -99,6 +99,17 @@
       grid-row: 2;
     }
   }
+  &__text-content {
+    @media (max-width: 1024px) {
+      text-align: center;
+      align-items: center;
+    }
+  }
+  &__cta {
+    @media (max-width: 1024px) {
+      padding-top: 20px;
+    }
+  }
 
   &__carousel {
     width: 100vw;
