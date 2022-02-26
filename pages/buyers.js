@@ -18,6 +18,7 @@ import Button from "../components/PrimaryButton";
 import InfoGraphic from "../components/InfoGraphic";
 import TransactionCard from "../components/TransactionCard";
 import CustomerReviewCard from "../components/CustomerReviewCard";
+import MobileHeader from "../components/MobileHeader";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -53,11 +54,12 @@ const Buyers = ({ buyersTransactions }) => {
         <link rel='icon' href='/favicon.png' />
       </Head>
       <Header />
+      <MobileHeader />
       <main>
         <section
           className={`${styles["hero-section"]} w-full h-screen flex justify-center content-center px-8 overflow-hidden`}
         >
-          <div className='container mx-auto flex flex-row justify-center content-center'>
+          <div className='container mx-auto flex flex-col-reverse lg:flex-row justify-center content-center'>
             <div className=' flex flex-col basis-1/2 justify-center content-end items-end relative '>
               <div
                 className={`${styles["hero-section__left"]} bg-light-blue-background mt-24 mb-36 h-full  absolute right-0 overflow-hidden`}
@@ -92,7 +94,9 @@ const Buyers = ({ buyersTransactions }) => {
                       />
                     </SwiperSlide>
                   </Swiper>
-                  <div className='absolute bottom-4 lg:bottom-12 lg:right-12 z-10 sellers-slide-nav-container'>
+                  <div
+                    className={`absolute bottom-4 lg:bottom-12 lg:right-12 z-10 ${styles["hero-section__slider-nav-container"]}`}
+                  >
                     <div className='flex flex-row gap-3 z-10'>
                       <div className='prev cursor-pointer'>
                         <div
@@ -125,8 +129,10 @@ const Buyers = ({ buyersTransactions }) => {
                 </div>
               </div>
             </div>
-            <div className='hero-content flex flex-col basis-1/2 w-6/12 justify-center content-start items-end'>
-              <div className='pr-12'>
+            <div
+              className={`${styles["hero-section__right"]} flex flex-col basis-1/2 w-6/12 justify-center content-start items-end`}
+            >
+              <div className='pr-0 lg:pr-12'>
                 <div className='mb-7'>
                   <Image
                     src='/svgs/ea-icon.svg'
