@@ -41,12 +41,12 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
               className={`${styles["left-01__overlay"]}  absolute top-0 bottom-0 left-0 right-0 -z-10`}
             />
             <div
-              className={`${styles["left-01__map-stack"]}  w-full flex justify-between`}
+              className={`${styles["left-01__overlay-content"]}  w-full flex justify-between`}
             >
               <div className='p-12 profile-container'>
                 {/* <SmallProfile name='Julia Runyan' city='Gig Harbor' state='WA' /> */}
               </div>
-              <div className='p-12'>
+              <div className={`p-12 ${styles["left-01__bottom-content"]}`}>
                 <div
                   className={`bg-white p-5 flex items-center ${styles["left-01__label-container"]}`}
                 >
@@ -85,7 +85,6 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
         for (let i = 1; i <= 9; i++) {
           images.push(
             <div
-              style={{ borderRadius: 30 }}
               className={`overflow-hidden webkit-rounded-full ${styles["left-03__image-container"]} relative`}
               key={i}
             >
@@ -134,7 +133,7 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
                   >
                     {/* <SmallProfile name='Bruno Arapovic' /> */}
                   </div>
-                  <div className='p-12'>
+                  <div className={`p-12 ${styles["left-04__bottom-content"]}`}>
                     <div
                       className={`bg-white p-5 flex items-center ${styles["left-04__label-container"]}`}
                     >
@@ -182,8 +181,7 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
               >
                 <div className='flex flex-col items-center'>
                   <div
-                    style={{ width: 140, height: 140 }}
-                    className='overflow-hidden rounded-full webkit-rounded-full'
+                    className={`${styles["left-05__profile-wrapper"]} overflow-hidden rounded-full webkit-rounded-full`}
                   >
                     {/* <StaticImage
                           className=' w-full h-full'
@@ -191,16 +189,14 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
                           src={"../assets/images/best-agents/Andy Peters.jpg"}
                         /> */}
                   </div>
-                  <div className='pt-6'>
+                  <div className='pt-2 lg:pt-6'>
                     <div
-                      className={` text-white  font-bold`}
-                      style={{ fontSize: 18 }}
+                      className={` text-white ${styles["left-05__profile-name"]} font-bold`}
                     >
                       Andy Peters
                     </div>
                     <div
-                      className={` text-white  italic text-center`}
-                      style={{ fontSize: 13 }}
+                      className={` text-white ${styles["left-05__profile-location"]} italic text-center`}
                     >
                       Atlanta, GA
                     </div>
