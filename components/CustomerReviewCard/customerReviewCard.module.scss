@@ -3,6 +3,10 @@
   border-radius: 30px;
   margin: 25px;
   border: 2px solid #ecf6fa;
+  @media (max-width: 1024px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   &__quotation-mark {
     margin-bottom: 25px;

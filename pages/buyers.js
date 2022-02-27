@@ -158,7 +158,7 @@ const Buyers = ({ buyersTransactions }) => {
         </section>
 
         <section
-          className={`${styles["why-section"]} w-full flex flex-col justify-center items-center pb-24 pt-8 px-8 fade-in-section`}
+          className={`${styles["why-section"]} w-full flex flex-col justify-center items-center pb-24 pt-8 px-5 lg:px-8 fade-in-section`}
         >
           <div className='container mx-auto flex flex-col justify-center content-center '>
             <div style={{ maxWidth: 650 }} className='self-center'>
@@ -210,11 +210,13 @@ const Buyers = ({ buyersTransactions }) => {
         </section>
 
         <section
-          className={`${styles["transactions-section"]}  w-full flex justify-center items-center pb-24 pt-16 px-8 overflow-hidden`}
+          className={`${styles["transactions-section"]}  w-full flex justify-center items-center pb-24 pt-16 px-5 lg:px-8 overflow-hidden`}
         >
           <div className='container mx-auto grid lg:flex justify-center items-center'>
             <div className='basis-1/3'>
-              <div className='flex flex-col justify-between fade-in-section'>
+              <div
+                className={`flex flex-col justify-between fade-in-section ${styles["transactions-section__text-content"]}`}
+              >
                 <h2 className='capitalize' style={{ maxWidth: 478 }}>
                   Qualified Agents Are Eager To Find You A Home
                 </h2>
@@ -224,17 +226,22 @@ const Buyers = ({ buyersTransactions }) => {
                   experienced real estate advisor to help you along your
                   journey. Let&apos;s Go.
                 </p>
-                <span style={{ width: 220 }}>
+                <span
+                  style={{ width: 220 }}
+                  className={`${styles["transactions-section__cta"]}`}
+                >
                   <Button text='Find an agent' />
                 </span>
               </div>
             </div>
-            <div className='basis-2/3 swiper-container pt-6 lg:pt-0'>
+            <div
+              className={`basis-2/3 ${styles["transactions-section__carousel-wrapper"]} swiper-container pt-10 lg:pt-0`}
+            >
               <div
                 className={`${styles["transactions-section__carousel"]} flex justify-end lg:ml-16 relative items-center pointer-events-auto`}
               >
                 <div
-                  className={`transactions-section__prev cursor-pointer mr-8`}
+                  className={`${styles["transactions-section__prev"]} transactions-section__prev cursor-pointer mr-8`}
                 >
                   <div
                     className='bg-brand-green rounded-full flex justify-center items-center'
@@ -314,9 +321,9 @@ const Buyers = ({ buyersTransactions }) => {
         </section>
 
         <section
-          className={` ${styles["speak-section"]} w-full flex justify-center items-center pb-24 pt-16 px-8 `}
+          className={` ${styles["speak-section"]} w-full flex justify-center items-center pb-24 pt-16 px-5 lg:px-8 `}
         >
-          <div className='container mx-auto flex justify-center items-center'>
+          <div className='container mx-auto flex flex-col lg:flex-row justify-center items-center'>
             <div
               className={`${styles["speak-section__call-card"]}  self-stretch my-10 relative overflow-hidden webkit-rounded-full`}
             >
@@ -387,7 +394,7 @@ const Buyers = ({ buyersTransactions }) => {
         </section>
 
         <section
-          className={`${styles["characteristics-section"]} w-full flex justify-center items-center pb-24 pt-16 px-8 relative`}
+          className={`${styles["characteristics-section"]} w-full flex justify-center items-center pb-24 pt-16 px-5 lg:px-8 relative`}
           // style={{ backgroundImage: `url(${housebgtwo})` }}
         >
           <Image
@@ -435,7 +442,7 @@ const Buyers = ({ buyersTransactions }) => {
         </section>
 
         <section
-          className={`${styles["stories-section"]} w-full flex justify-center items-center pb-24 pt-36 px-8`}
+          className={`${styles["stories-section"]} w-full flex justify-center items-center pb-24 pt-36 px-5 lg:px-8`}
         >
           <div className='container mx-auto flex flex-col justify-center items-center'>
             <h2 style={{ maxWidth: 500 }}>What Our Customers Say</h2>

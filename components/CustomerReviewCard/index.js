@@ -30,7 +30,7 @@ const CustomerReviewCard = ({ review, date, name, source, border = true }) => {
       <div className='flex flex-col h-full justify-between'>
         <p>{review}</p>
 
-        <div className='flex  items-center justify-between'>
+        <div className='flex flex-col lg:flex-row lg:items-center justify-between'>
           <div className='flex flex-col'>
             <h5>{name}</h5>
             <a>{source}</a>
