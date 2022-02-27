@@ -82,7 +82,7 @@ const FindAgentForm = () => {
           className={`${styles["hero-form__toggle-form-wrapper"]} flex flex-row justify-center content-center align-center`}
         >
           <div
-            className={` ${styles["hero-form__h2"]} ${
+            className={`h2 ${styles["hero-form__h2"]} ${
               styles["hero-form__toggle-form"]
             } ${formType === "Seller" ? styles["hero-form__h2--active"] : ""} `}
             onClick={() => {
@@ -92,7 +92,7 @@ const FindAgentForm = () => {
             I’m a Seller
           </div>
           <div
-            className={` ${styles["hero-form__h2"]} ${
+            className={`h2 ${styles["hero-form__h2"]} ${
               styles["hero-form__toggle-form"]
             } ${formType === "Buyer" ? styles["hero-form__h2--active"] : ""} `}
             onClick={() => {

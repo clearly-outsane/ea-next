@@ -13,6 +13,7 @@ import FindAgentForm from "../components/FindAgentForm";
 import CustomerReviewCard from "../components/CustomerReviewCard";
 import BottomCTA from "../components/BottomCTA";
 import Footer from "../components/Footer";
+import MobileHeader from "../components/MobileHeader";
 
 export default function Home() {
   return (
@@ -26,24 +27,27 @@ export default function Home() {
         <link rel='icon' href='/favicon.png' />
       </Head>
       <Header />
+      <MobileHeader />
       <main>
         <section
-          className={`${styles["hero-section"]} w-full h-screen flex justify-center content-center px-5 lg:px-8  `}
+          className={`${styles["hero-section"]} w-full h-screen flex justify-center content-center px-5 lg:px-8 relative`}
         >
-          <div className={`bg-image overflow-hidden`}>
+          <div className={`  bg-image overflow-hidden`}>
             <Image
               alt=''
               src='/svgs/house-bg.svg'
               layout='fill'
               objectFit='cover'
-              objectPosition='center -320px'
               priority
+              className={`${styles["hero-section__bg-image"]}`}
               // quality={100}
             />
           </div>
-          <div className='container mx-auto flex flex-row justify-center content-center'>
+          <div
+            className={`${styles["hero-section__container"]} container mx-auto flex flex-col lg:flex-row justify-center content-center`}
+          >
             <div
-              className={`${styles["hero-section__content"]} flex flex-col basis-1/2 justify-center content-start items-start`}
+              className={`${styles["hero-section__left"]} flex flex-col basis-1/2 justify-center content-start items-start`}
             >
               <div className='mb-8'>
                 <Image
@@ -69,9 +73,9 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles["get-matched-section"]} w-full flex justify-center px-5 lg:px-8 h-screen`}
+          className={`${styles["get-matched-section"]} w-full flex justify-center px-5 lg:px-8 `}
         >
-          <div className='container mx-auto flex justify-center '>
+          <div className='container mx-auto flex flex-col lg:flex-row justify-center '>
             <div
               className={`flex flex-col basis-1/2 justify-center items-start `}
             >
@@ -313,7 +317,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className='container mx-auto flex flex-row justify-center items-stretch content-center '>
+          <div className='container mx-auto flex flex-col lg:flex-row justify-center items-stretch content-center '>
             <CustomerReviewCard
               name='Adam'
               review="Great customer service. I was contacted by 3 agents quicklyinterviewed all 3 and picked one that I felt most comfortable with.

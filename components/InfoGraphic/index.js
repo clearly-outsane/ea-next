@@ -17,7 +17,11 @@ const InfoGraphic = ({
   state = "FL",
 }) => {
   return (
-    <div className={`h-full w-full ${styles["info-graphic"]} relative`}>
+    <div
+      className={`h-full w-full ${styles["info-graphic"]} relative ${
+        showProfile ? styles["info-graphic--small"] : ""
+      }`}
+    >
       <div className='absolute w-full h-full'>
         {!showProfile && showLabel && (
           <div
