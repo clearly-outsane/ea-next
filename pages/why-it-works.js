@@ -6,6 +6,7 @@ import Head from "next/head";
 import styles from "../styles/whyItWorks.module.scss";
 
 //components
+import MobileHeader from "../components/MobileHeader";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/PrimaryButton";
@@ -86,6 +87,7 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
             <div
               style={{ borderRadius: 30 }}
               className={`overflow-hidden webkit-rounded-full ${styles["left-03__image-container"]} relative`}
+              key={i}
             >
               <Image
                 layout='fill'
@@ -267,11 +269,13 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
       return <div>This shouldn&apos;t be blank</div>;
     };
     return (
-      <div className={`${styles["data-card"]} w-full h-full flex items-center`}>
-        <div className='basis-1/2 w-full h-full relative '>
+      <div
+        className={`${styles["data-card"]} w-full h-full flex flex-col lg:flex-row items-center`}
+      >
+        <div className='lg:basis-1/2 w-full h-full relative '>
           <LeftSide />
         </div>
-        <div className='basis-1/2 right pl-20 flex flex-col'>
+        <div className='lg:basis-1/2 right pl-20 flex flex-col'>
           <div className={`${styles["data-card__number"]}  font-bold`}>
             {number}{" "}
           </div>
@@ -314,13 +318,16 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
         <link rel='icon' href='/favicon.png' />
       </Head>
       <Header />
+      <MobileHeader />
       <main>
         <section
-          className={`${styles["hero-section"]} w-full h-screen flex justify-center content-center px-5 lg:px-8 overflow-hidden`}
+          className={`${styles["hero-section"]} w-full h-screen flex justify-center content-center px-8 overflow-hidden`}
           style={{ minHeight: 820 }}
         >
           <div className='container mx-auto flex flex-row justify-center content-center'>
-            <div className='hero-content flex flex-col basis-1/2 justify-center content-start items-start'>
+            <div
+              className={`${styles["hero-section__left"]} flex flex-col lg:basis-1/2 justify-center content-start items-center lg:items-start`}
+            >
               <div className='pb-6'>
                 <Image
                   src='/svgs/ea-icon.svg'
@@ -385,7 +392,7 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
         </section>
 
         <section
-          className={`${styles["data-section"]} w-full flex justify-center content-center px-8 mt-32 relative overflow-hidden`}
+          className={`${styles["data-section"]} w-full flex justify-center content-center px-8 lg:mt-32 relative overflow-hidden`}
         >
           <div
             className={`absolute top-0 left-0 right-0 ${styles["data-section__background-gradient"]} -z-10`}
@@ -413,7 +420,9 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
                   alt='arrow down'
                 />
               </div>
-              <div className='data-col mt-24 w-full flex flex-col items-center gap-32 mb-36'>
+              <div
+                className={`${styles["data-section__data-col"]}  mt-24 w-full flex flex-col items-center gap-32 mb-36`}
+              >
                 <DataCard
                   number='01'
                   title='Days On Market'
