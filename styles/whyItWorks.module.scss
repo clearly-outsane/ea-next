@@ -73,8 +73,10 @@
 
 .data-section {
   &__data-col {
-    gap: 2rem;
-    margin-bottom: 50px;
+    @media (max-width: 1024px) {
+      gap: 2rem;
+      margin-bottom: 50px;
+    }
   }
   &__background-gradient {
     background: linear-gradient(
