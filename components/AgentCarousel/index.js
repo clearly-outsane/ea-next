@@ -82,7 +82,9 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
             })}
           </Carousel>
         </div>
-        <div className='agent-controls absolute bottom-0 left-6'>
+        <div
+          className={`${styles["agent-carousel__thumbs"]} absolute bottom-0 left-6`}
+        >
           <div className='font-light text-slate-700 agent-controls-text'>
             <div className='inline font-bold '>
               {bestAgents[currentSlide].agent_count}+{" "}
@@ -95,28 +97,29 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
             {bestAgents.slice(0, 4).map((agent, i) => {
               return (
                 <span
-                  className={`h-full relative agent-thumbnail-wrapper flex justify-center items-center ${
+                  className={`h-full outline outline-2 rounded-full relative ${
+                    styles["agent-carousel__thumbs-image-wrapper"]
+                  } flex justify-center items-center ${
                     i !== 0 ? "-ml-2" : ""
+                  } ${
+                    currentSlide === i ? "outline-brand-blue" : "outline-white"
                   }`}
                   onClick={() => onThumbClick(i)}
                   key={i}
                   style={{ zIndex: 4 - i }}
                 >
-                  {/* <AgentImage
-                    name={agent.name}
-                    className={` h-6 w-6 lg:h-9 lg:w-9 outline outline-2 cursor-pointer  `}
-                    style={{
-                      zIndex: 4 - i,
-                      borderRadius: 9999,
-                      overflow: "hidden",
-                    }}
-                  /> */}
+                  <Image
+                    src={`/images/agents/${agent.name}.jpg`}
+                    alt={agent.name}
+                    layout='fill'
+                    objectFit='cover'
+                  />
 
-                  <div
+                  {/* <div
                     className={`webkit-rounded-full rounded-full overflow-hidden absolute top-0 left-0 right-0 bottom-0 ${
                       currentSlide === i ? "bg-brand-blue" : "bg-white"
                     }`}
-                  />
+                  /> */}
                 </span>
               );
             })}

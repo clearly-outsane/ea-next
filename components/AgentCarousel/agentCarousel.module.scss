@@ -3,6 +3,9 @@
   min-height: 445px;
   @media (min-width: 640px) {
     height: auto;
+    &__thumbs {
+      display: none;
+    }
   }
   @media (min-width: 1024px) {
     height: 696px;
@@ -10,6 +13,19 @@
 
     &__thumbs {
       display: block;
+    }
+  }
+  &__thumbs {
+    display: block;
+  }
+
+  &__thumbs-image-wrapper {
+    overflow: hidden;
+    height: 28px;
+    width: 28px;
+    @media (min-width: 1024px) {
+      height: 39px;
+      width: 39px;
     }
   }
 
