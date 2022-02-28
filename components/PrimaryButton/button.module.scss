@@ -1,5 +1,6 @@
 .button {
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   cursor: pointer;
   background: #174888;
   border: none;
@@ -62,6 +63,7 @@
 }
 
 .button--primary::before {
+  overflow: hidden;
   content: "";
   background: #174888;
   width: 120%;
@@ -79,6 +81,7 @@
 }
 
 .button--primary::after {
+  overflow: hidden;
   content: "";
   background: #174888;
   transform: translate3d(0, -100%, 0);
