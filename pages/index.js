@@ -14,8 +14,9 @@ import CustomerReviewCard from "../components/CustomerReviewCard";
 import BottomCTA from "../components/BottomCTA";
 import Footer from "../components/Footer";
 import MobileHeader from "../components/MobileHeader";
+import AgentCarousel from "../components/AgentCarousel";
 
-export default function Home() {
+const Home = ({ bestAgents, mapsStyleArray }) => {
   return (
     <div>
       <Head>
@@ -100,7 +101,10 @@ export default function Home() {
             <div
               className={`${styles["get-matched-section__map-wrapper"]} flex flex-col basis-1/2 justify-center content-center lg:items-end items-center`}
             >
-              agent carousel
+              <AgentCarousel
+                mapsStyleArray={mapsStyleArray}
+                bestAgents={bestAgents}
+              />
             </div>
           </div>
         </section>
@@ -352,4 +356,233 @@ export default function Home() {
       </main>
     </div>
   );
+};
+
+export async function getStaticProps(context) {
+  const bestAgents = [
+    {
+      name: "Jason Strattom",
+      state: "IL",
+      city: "Chicago",
+      listings_sold: "170",
+      average_day_on_market: "45",
+      star_rating: "5",
+      reviews: "185",
+      agent_count: "12387",
+      sales: [
+        {
+          id: "10102967",
+          lat: "41.914191",
+          lng: "-87.686433",
+          represented: "Seller",
+          price: "445000",
+        },
+        {
+          id: "10102969",
+          lat: "41.880043",
+          lng: "-87.649307",
+          represented: "Seller",
+          price: "800000",
+        },
+        {
+          id: "10102968",
+          lat: "41.906909",
+          lng: "-87.676034",
+          represented: "Seller",
+          price: "1093000",
+        },
+      ],
+    },
+    {
+      name: "Amanda Lefebvre",
+      city: "Houston",
+      state: "TX",
+      listings_sold: "6",
+      average_day_on_market: "45",
+      star_rating: "5",
+      reviews: "16",
+      agent_count: "16180",
+      sales: [
+        {
+          id: "10961598",
+          lat: "29.921012",
+          lng: "-95.589601",
+          represented: "Seller",
+          price: "0",
+        },
+        {
+          id: "10961601",
+          lat: "29.916248",
+          lng: "-95.565898",
+          represented: "Buyer",
+          price: "0",
+        },
+        {
+          id: "10758934",
+          lat: "29.864625",
+          lng: "-95.590462",
+          represented: "Seller",
+          price: "0",
+        },
+      ],
+    },
+    {
+      name: "Brad Korb",
+      city: "Los Angeles",
+      state: "CA",
+      listings_sold: "209",
+      average_day_on_market: "31",
+      star_rating: "5",
+      reviews: "814",
+      agent_count: "20187",
+      sales: [
+        {
+          id: "9996622",
+          lat: "34.19846",
+          lng: "-118.49398",
+          represented: "Seller",
+          price: "474000",
+        },
+        {
+          id: "9996632",
+          lat: "34.053075",
+          lng: "-118.266088",
+          represented: "Seller",
+          price: "560000",
+        },
+        {
+          id: "9996635",
+          lat: "34.118876",
+          lng: "-118.260865",
+          represented: "Both",
+          price: "500000",
+        },
+      ],
+    },
+    {
+      name: "Tom Baron",
+      city: "New York",
+      state: "NY",
+      listings_sold: "6",
+      average_day_on_market: "45",
+      star_rating: "5",
+      reviews: "3",
+      agent_count: "17742",
+      sales: [
+        {
+          id: "11370565",
+          lat: "40.781365",
+          lng: "-73.951866",
+          represented: "Buyer",
+          price: "750000",
+        },
+        {
+          id: "11370566",
+          lat: "40.747833",
+          lng: "-73.971131",
+          represented: "Buyer",
+          price: "585000",
+        },
+        {
+          id: "11370567",
+          lat: "40.723828",
+          lng: "-73.989034",
+          represented: "Buyer",
+          price: "2530000",
+        },
+      ],
+    },
+    {
+      city: "Las Vegas",
+      state: "NV",
+      name: "William (Billy) Alt",
+      listings_sold: "153",
+      average_day_on_market: "43",
+      star_rating: "5",
+      reviews: "188",
+    },
+    {
+      city: "Atlanta",
+      state: "GA",
+      name: "Andy Peters",
+      listings_sold: "118",
+      average_day_on_market: "4",
+      star_rating: "5",
+      reviews: "348",
+    },
+  ];
+
+  const mapsStyleArray = [
+    {
+      featureType: "all",
+      elementType: "geometry",
+      stylers: [
+        {
+          color: "#157395",
+        },
+      ],
+    },
+    {
+      featureType: "all",
+      elementType: "labels.text",
+      stylers: [
+        {
+          color: "#e0e0e0",
+        },
+      ],
+    },
+    {
+      featureType: "all",
+      elementType: "labels.text.stroke",
+      stylers: [
+        {
+          visibility: "off",
+        },
+      ],
+    },
+    {
+      featureType: "all",
+      elementType: "labels.icon",
+      stylers: [
+        {
+          visibility: "off",
+        },
+      ],
+    },
+    {
+      featureType: "landscape",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#3990b0",
+        },
+        {
+          visibility: "simplified",
+        },
+      ],
+    },
+    {
+      featureType: "road.highway",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#25586a",
+        },
+      ],
+    },
+    {
+      featureType: "water",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#52aacd",
+        },
+      ],
+    },
+  ];
+
+  return {
+    props: { bestAgents, mapsStyleArray }, // will be passed to the page component as props
+  };
 }
+export default Home;

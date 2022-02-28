@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import GoogleMapReact from "google-map-react";
 
 //styles
@@ -31,12 +32,6 @@ const GoogleMaps = ({
   };
 
   useEffect(() => {
-    console.log(center);
-
-    return () => {};
-  }, [center]);
-
-  useEffect(() => {
     myMap && markers && fitBounds(myMap);
 
     return () => {};
@@ -48,7 +43,7 @@ const GoogleMaps = ({
       markers.map((sale) => {
         bounds.extend(new window.google.maps.LatLng(sale.lat, sale.lng));
       });
-    console.log(bounds);
+
     map && map.fitBounds(bounds);
   };
 
@@ -69,9 +64,14 @@ const GoogleMaps = ({
       >
         {markers &&
           markers.map((sale, i) => {
-            console.log(sale.lat, sale.lng);
             return (
               <div className='map_marker' key={i} lat={sale.lat} lng={sale.lng}>
+                <Image
+                  src='/svgs/location-pin.svg'
+                  width={24}
+                  height={24}
+                  alt='map pin'
+                />
                 {/* <MapMarker fill='#157395' /> */}
               </div>
             );
