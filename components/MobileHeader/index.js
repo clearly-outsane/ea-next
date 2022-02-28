@@ -113,7 +113,11 @@ const MobileHeader = () => {
               }`}
               style={{ maxWidth: 220 }}
             >
-              <Button text='Find an agent' variant={"button--white"} />
+              <Button
+                href='https://www.effectiveagents.com/sellers/?c1=a'
+                text='Find an agent'
+                variant={"button--white"}
+              />
             </li>
           </ul>
         </div>

@@ -77,7 +77,11 @@ const Header = () => {
         </div>
 
         <div className='flex flex-1 justify-end' style={{ marginLeft: "auto" }}>
-          <Button text='Find An Agent' large />
+          <Button
+            href='https://www.effectiveagents.com/sellers/?c1=a'
+            text='Find An Agent'
+            large
+          />
         </div>
       </div>
     </nav>

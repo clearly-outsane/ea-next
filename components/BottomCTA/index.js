@@ -21,7 +21,7 @@ const BottomCTA = () => {
           className={`${styles["call-to-action__bg-image"]}`}
         />
         <h2>Let’s Get Started</h2>
-        <Button text='Find an Agent' variant={`button--white`} />
+        <Button href="https://www.effectiveagents.com/sellers/?c1=a" text='Find an Agent' variant={`button--white`} />
       </div>
     </section>
   );

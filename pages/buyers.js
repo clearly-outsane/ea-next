@@ -150,7 +150,10 @@ const Buyers = ({ buyersTransactions }) => {
                   market conditions.
                 </h4>
                 <div className='mt-4'>
-                  <Button text='Buy a home' />
+                  <Button
+                    href='https://www.effectiveagents.com/buyers/?c1=11&agt='
+                    text='Buy a home'
+                  />
                 </div>
               </div>
             </div>
@@ -230,7 +233,10 @@ const Buyers = ({ buyersTransactions }) => {
                   style={{ width: 220 }}
                   className={`${styles["transactions-section__cta"]}`}
                 >
-                  <Button text='Find an agent' />
+                  <Button
+                    href='https://www.effectiveagents.com/buyers/?c1=11&agt='
+                    text='Find an agent'
+                  />
                 </span>
               </div>
             </div>

@@ -186,7 +186,11 @@ const FindAgentForm = () => {
                 value={formData.zipCodeValue}
               />
             </div>
-            <Button text='Find an Agent' type='submit' />
+            <Button
+              href='https://www.effectiveagents.com/sellers/?c1=a'
+              text='Find an Agent'
+              type='submit'
+            />
           </form>
         </div>
 
@@ -265,7 +269,11 @@ const FindAgentForm = () => {
                 value={formData.zipCodeValue}
               />
             </div>
-            <Button text='Find an Agent' type='submit' />
+            <Button
+              href='https://www.effectiveagents.com/sellers/?c1=a'
+              text='Find an Agent'
+              type='submit'
+            />
           </form>
         </div>
       </div>

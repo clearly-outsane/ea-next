@@ -95,7 +95,10 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
                   Get free, objective, performance-based recommendations for top
                   real estate agents in your neighborhood.
                 </p>
-                <Button text='Get Matched' />
+                <Button
+                  href='https://www.effectiveagents.com/sellers/?c1=a'
+                  text='Get Matched'
+                />
               </div>
             </div>
             <div
@@ -287,7 +290,10 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
               className={`container mx-auto flex flex-col justify-around items-center ${styles["numbers-section__bottom-content"]}`}
             >
               <h2>Find The Perfect Agent For Your Transaction.</h2>
-              <Button text='Find an Agent' />
+              <Button
+                href='https://www.effectiveagents.com/sellers/?c1=a'
+                text='Find an Agent'
+              />
             </div>
           </div>
         </section>
@@ -324,10 +330,10 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
           <div className='container mx-auto flex flex-col lg:flex-row justify-center items-stretch content-center '>
             <CustomerReviewCard
               name='Adam'
-              review="Great customer service. I was contacted by 3 agents quicklyinterviewed all 3 and picked one that I felt most comfortable with.
+              review="Great customer service. I was contacted by 3 agents quickly interviewed all 3 and picked one that I felt most comfortable with.
             Honestly all 3 would have done a great job so it actually was a tough
             decision. I didn't expect this high quality agents to choose from initially
-            but glad I did. Effective agents didn't spam my email or bother me and
+            but glad I did. Effective Agents didn't spam my email or bother me and
             the 1 time I had a question they responded same day. I sold my home
             and bought a new one with ease."
               date='AZ , 2022-01-13 18:48:12'
@@ -345,11 +351,11 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
               date='PA , 2021-08-31 12:56:08'
             />
           </div>
-          <div
+          {/* <div
             className={`container mx-auto flex flex-col justify-around items-center ${styles["stories-section__bottom-content"]}`}
           >
             <Button text='View All Reviews' />
-          </div>
+          </div> */}
         </section>
         <BottomCTA />
         <Footer />

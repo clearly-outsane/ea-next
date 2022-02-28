@@ -97,6 +97,7 @@ const AgentCard = ({
             className={`flex justify-center items-center pt-4 ${styles["agent-card__button"]}`}
           >
             <Button
+              href='https://www.effectiveagents.com/sellers/?c1=a'
               text={"Talk to " + nameSplit[0]}
               variant='button--white'
               className={`${styles["agent-card__button-text"]} truncate`}

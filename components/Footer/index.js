@@ -16,7 +16,10 @@ const Footer = () => {
         <div className='flex justify-between items-center pb-12'>
           <h2 className='mb-0'>Find an Effective Agent Near You</h2>
           <div>
-            <Button text='Find an Agent' />
+            <Button
+              href='https://www.effectiveagents.com/sellers/?c1=a'
+              text='Find an Agent'
+            />
           </div>
         </div>
         <div className='py-10 '>

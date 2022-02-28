@@ -79,7 +79,10 @@ const Sellers = ({ sellersTransactions }) => {
                 reviews to find the best Real Estate Agents near you.
               </h4>
               <div className='mt-4'>
-                <Button text='Sell my home' />
+                <Button
+                  href='https://www.effectiveagents.com/sellers/?c1=11&agt='
+                  text='Sell my home'
+                />
               </div>
             </div>
 
@@ -311,7 +314,10 @@ const Sellers = ({ sellersTransactions }) => {
                   style={{ width: 220 }}
                   className={`${styles["transactions-section__cta"]}`}
                 >
-                  <Button text='Find an agent' />
+                  <Button
+                    href='https://www.effectiveagents.com/sellers/?c1=11&agt='
+                    text='Find an agent'
+                  />
                 </span>
               </div>
             </div>
