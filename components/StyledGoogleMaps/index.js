@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import GoogleMapReact from "google-map-react";
 
+//images
+import MapMarker from "../../assets/svgs/MapMarker.svg";
+
 //styles
 import styles from "./googleMaps.module.scss";
 
@@ -66,13 +69,7 @@ const GoogleMaps = ({
           markers.map((sale, i) => {
             return (
               <div className='map_marker' key={i} lat={sale.lat} lng={sale.lng}>
-                <Image
-                  src='/svgs/location-pin.svg'
-                  width={24}
-                  height={24}
-                  alt='map pin'
-                />
-                {/* <MapMarker fill='#157395' /> */}
+                <MapMarker fill='#157395' />
               </div>
             );
           })}
