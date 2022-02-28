@@ -99,12 +99,14 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
             {bestAgents.slice(0, 4).map((agent, i) => {
               return (
                 <span
-                  className={`h-full cursor-pointer outline outline-2 rounded-full relative ${
+                  className={`h-full cursor-pointer rounded-full relative ${
                     styles["agent-carousel__thumbs-image-wrapper"]
                   } flex justify-center items-center ${
                     i !== 0 ? "-ml-2" : ""
                   } ${
-                    currentSlide === i ? "outline-brand-blue" : "outline-white"
+                    currentSlide === i
+                      ? styles["agent-carousel__fake-blue-shadow"]
+                      : styles["agent-carousel__fake-white-shadow"]
                   }`}
                   onClick={() => onThumbClick(i)}
                   key={i}

@@ -1,6 +1,12 @@
 .agent-carousel {
   width: 100%;
   min-height: 445px;
+  &__fake-blue-shadow {
+    box-shadow: 0 0 0 2pt #174888;
+  }
+  &__fake-white-shadow {
+    box-shadow: 0 0 0 2pt #fff;
+  }
   &__thumbs {
     display: block;
   }
