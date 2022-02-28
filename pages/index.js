@@ -336,7 +336,7 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
             but glad I did. Effective Agents didn't spam my email or bother me and
             the 1 time I had a question they responded same day. I sold my home
             and bought a new one with ease."
-              date='AZ , 2022-01-13 18:48:12'
+              date='13th Jan 2022 in AZ'
             />
             <CustomerReviewCard
               name='J.F. Jimenez'
@@ -348,7 +348,7 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
             home for sale. I highly recommend effectiveagents.com as a great
             resource for finding a performance-proven realtor to help you with the
             sale/purchase of home'
-              date='PA , 2021-08-31 12:56:08'
+              date='31st Aug 2022 in PA'
             />
           </div>
           {/* <div
