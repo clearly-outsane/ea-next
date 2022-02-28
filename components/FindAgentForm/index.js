@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import Autocomplete from "react-google-autocomplete";
+import Autocomplete, { usePlacesWidget } from "react-google-autocomplete";
 
 //component
 import Button from "../PrimaryButton";
@@ -11,10 +11,6 @@ import Button from "../PrimaryButton";
 import styles from "./findAgentForm.module.scss";
 
 const FindAgentForm = () => {
-  const inputRef = useRef();
-
-  const [off, setOff] = useState(null);
-
   const [formData, setFormData] = useState({
     zipCodeSuggestionList: [],
     zipCodeValue: "",
@@ -26,15 +22,7 @@ const FindAgentForm = () => {
   });
   const [formType, setFormType] = useState("Seller");
 
-  useEffect(() => {
-    console.log(process.env.NEXT_PUBLIC_GMAPS_API_KEY);
-
-    setOff("off");
-    return () => {};
-  }, [formData]);
-
   const onPlaceSelected = (place) => {
-    console.log(place);
     let componentForm = {
       street_number: "short_name",
       route: "long_name",
@@ -118,7 +106,7 @@ const FindAgentForm = () => {
           >
             <div className={`${styles["hero-form__input-wrapper"]} relative`}>
               <Autocomplete
-                autoComplete={off}
+                inputAutocompleteValue='off'
                 id='address'
                 name='AddressData'
                 placeholder='Enter Your Address'
@@ -208,13 +196,12 @@ const FindAgentForm = () => {
           >
             <div className={`${styles["hero-form__input-wrapper"]}`}>
               <Autocomplete
-                ref={inputRef}
                 // type='number'
                 id='zipCode'
-                autoComplete={off}
                 name='Zip-Code-Buyer'
                 data-name='Zip'
                 placeholder='Enter ZIP Code'
+                inputAutocompleteValue='off'
                 // apiKey={process.env.NEXT_PUBLIC_GMAPS_API_KEY}
                 onPlaceSelected={onPlaceSelected}
                 className={`${styles["hero-form__input"]}`}
