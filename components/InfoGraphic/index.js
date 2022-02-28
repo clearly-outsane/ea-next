@@ -1,4 +1,5 @@
 import React from "react";
+import SmallProfile from "../SmallProfile";
 
 //components
 // import SmallProfile from "../small-profile";
@@ -52,8 +53,13 @@ const InfoGraphic = ({
           className={`${styles["info-graphic__center-circle"]} rounded-full flex flex-col  justify-center items-center relative`}
         >
           {showProfile && (
-            <div className='profile absolute '>
-              {/* <SmallProfile name={name} fontColorClass='text-black' /> */}
+            <div className={`${styles["info-graphic__profile"]} absolute`}>
+              <SmallProfile
+                name={name}
+                city={city}
+                state={state}
+                fontColorClass='text-black'
+              />
             </div>
           )}
           <div

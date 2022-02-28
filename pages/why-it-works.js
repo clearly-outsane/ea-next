@@ -12,6 +12,7 @@ import Footer from "../components/Footer";
 import Button from "../components/PrimaryButton";
 import AgentCard from "../components/AgentCard";
 import InfoGraphic from "../components/InfoGraphic";
+import SmallProfile from "../components/SmallProfile";
 // import GoogleMaps from "../components/StyledGoogleMaps";
 
 const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
@@ -43,8 +44,12 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
             <div
               className={`${styles["left-01__overlay-content"]}  w-full flex justify-between`}
             >
-              <div className='p-12 profile-container'>
-                {/* <SmallProfile name='Julia Runyan' city='Gig Harbor' state='WA' /> */}
+              <div className='p-6 lg:p-12 profile-container'>
+                <SmallProfile
+                  name='Julia Runyan'
+                  city='Gig Harbor'
+                  state='WA'
+                />
               </div>
               <div className={`p-12 ${styles["left-01__bottom-content"]}`}>
                 <div
@@ -131,7 +136,7 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
                   <div
                     className={`p-12 ${styles["left-04__profile-container"]}`}
                   >
-                    {/* <SmallProfile name='Bruno Arapovic' /> */}
+                    <SmallProfile name='Bruno Arapovic' />
                   </div>
                   <div className={`p-12 ${styles["left-04__bottom-content"]}`}>
                     <div
@@ -181,13 +186,18 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
               >
                 <div className='flex flex-col items-center'>
                   <div
-                    className={`${styles["left-05__profile-wrapper"]} overflow-hidden rounded-full webkit-rounded-full`}
+                    className={`${styles["left-05__profile-wrapper"]} relative overflow-hidden rounded-full webkit-rounded-full`}
                   >
                     {/* <StaticImage
                           className=' w-full h-full'
                           alt='Jane profile pic'
                           src={"../assets/images/best-agents/Andy Peters.jpg"}
                         /> */}
+                    <Image
+                      src={`/images/agents/Andy Peters.jpg`}
+                      alt='andy peters pic'
+                      layout='fill'
+                    />
                   </div>
                   <div className='pt-2 lg:pt-6'>
                     <div
