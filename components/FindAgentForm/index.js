@@ -27,7 +27,7 @@ const FindAgentForm = () => {
   const [formType, setFormType] = useState("Seller");
 
   useEffect(() => {
-    console.log(formData);
+    console.log(process.env.NEXT_PUBLIC_GMAPS_API_KEY);
 
     setOff("off");
     return () => {};
@@ -122,7 +122,7 @@ const FindAgentForm = () => {
                 id='address'
                 name='AddressData'
                 placeholder='Enter Your Address'
-                apiKey={process.env.NEXT_PUBLIC_GMAPS_API_KEY}
+                apiKey={process.env.NEXT_PUBLIC_GMAPS_API_KEY.toString()}
                 onPlaceSelected={onPlaceSelected}
                 className={`${styles["hero-form__input"]}`}
                 options={{
