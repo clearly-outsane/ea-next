@@ -100,6 +100,7 @@ const AgentCard = ({
               href='https://www.effectiveagents.com/sellers/?c1=a'
               text={"Talk to " + nameSplit[0]}
               variant='button--white'
+              aClassname={`${styles["agent-card__button-link"]}`}
               className={`${styles["agent-card__button-text"]} truncate`}
             />
           </div>

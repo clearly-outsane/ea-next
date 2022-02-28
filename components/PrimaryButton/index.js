@@ -8,10 +8,11 @@ const Button = ({
   type = "button",
   variant,
   className,
+  aClassname,
   href = null,
 }) => {
   return href ? (
-    <a href={href}>
+    <a href={href} className={`${aClassname}`}>
       <button
         name={type}
         type={type}

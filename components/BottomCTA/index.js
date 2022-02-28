@@ -9,7 +9,7 @@ import styles from "./bottomCTA.module.scss";
 
 const BottomCTA = () => {
   return (
-    <section className={`${styles["call-to-action"]} w-full px-8`}>
+    <section className={`${styles["call-to-action"]} w-full px-5 lg:px-8`}>
       <div
         className={`container mx-auto flex flex-col justify-center items-center content-center ${styles["call-to-action__content"]} relative`}
         // style={{ backgroundImage: `url(${blueroads})` }}
@@ -21,7 +21,11 @@ const BottomCTA = () => {
           className={`${styles["call-to-action__bg-image"]}`}
         />
         <h2>Let’s Get Started</h2>
-        <Button href="https://www.effectiveagents.com/sellers/?c1=a" text='Find an Agent' variant={`button--white`} />
+        <Button
+          href='https://www.effectiveagents.com/sellers/?c1=a'
+          text='Find an Agent'
+          variant={`button--white`}
+        />
       </div>
     </section>
   );
