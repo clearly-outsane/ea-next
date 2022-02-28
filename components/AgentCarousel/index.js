@@ -16,7 +16,7 @@ const MapCard = ({ bestAgents, mapsStyleArray, currentSlide }) => {
     <div className='bg-transparent h-full w-full webkit-rounded-full'>
       <div
         id='map_div'
-        className='h-full w-full rounded-3xl sm:rounded-b-none lg:rounded-3xl overflow-hidden'
+        className={`${styles["agent-carousel__map-div"]} h-full w-full rounded-3xl sm:rounded-b-none lg:rounded-3xl overflow-hidden`}
       >
         <GoogleMaps
           mapsStyleArray={mapsStyleArray}

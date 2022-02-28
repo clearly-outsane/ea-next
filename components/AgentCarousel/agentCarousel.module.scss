@@ -56,6 +56,10 @@
     }
   }
 
+  &__map-div {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+  }
+
   &__cards-carousel {
     width: 203.92px;
     height: 290.41px;
