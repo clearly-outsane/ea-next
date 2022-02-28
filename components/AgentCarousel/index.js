@@ -60,7 +60,7 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
             showThumbs={false}
             showIndicators={true}
             showStatus={false}
-            showArrows={true}
+            showArrows={false}
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
               hasPrev && (
                 <button
@@ -85,7 +85,9 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
         <div
           className={`${styles["agent-carousel__thumbs"]} absolute bottom-0 left-6`}
         >
-          <div className='font-light text-slate-700 agent-controls-text'>
+          <div
+            className={`font-light text-slate-700 ${styles["agent-carousel__thumbs-text"]}`}
+          >
             <div className='inline font-bold '>
               {bestAgents[currentSlide].agent_count}+{" "}
             </div>
@@ -97,7 +99,7 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
             {bestAgents.slice(0, 4).map((agent, i) => {
               return (
                 <span
-                  className={`h-full outline outline-2 rounded-full relative ${
+                  className={`h-full cursor-pointer outline outline-2 rounded-full relative ${
                     styles["agent-carousel__thumbs-image-wrapper"]
                   } flex justify-center items-center ${
                     i !== 0 ? "-ml-2" : ""

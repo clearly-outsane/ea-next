@@ -67,7 +67,7 @@ const AgentCard = ({
             Listings Sold
           </div>
           <div
-            className={`text-3xl text-green-200 ${styles["agent-card__number"]}`}
+            className={`text-3xl text-green-200 ${styles["agent-card__stat-number"]}`}
           >
             {listings_sold}
           </div>
@@ -77,7 +77,7 @@ const AgentCard = ({
             Average days on market
           </div>
           <div
-            className={`text-3xl text-green-200 ${styles["agent-card__number"]}`}
+            className={`text-3xl text-green-200 ${styles["agent-card__stat-number"]}`}
           >
             {average_day_on_market}
           </div>
@@ -87,7 +87,7 @@ const AgentCard = ({
             All time transactions
           </div>
           <div
-            className={`text-3xl text-green-200 ${styles["agent-card__number"]}`}
+            className={`text-3xl text-green-200 ${styles["agent-card__stat-number"]}`}
           >
             21k
           </div>
@@ -99,7 +99,7 @@ const AgentCard = ({
             <Button
               text={"Talk to " + nameSplit[0]}
               variant='button--white'
-              className={`${styles["agent-card__button-text"]}`}
+              className={`${styles["agent-card__button-text"]} truncate`}
             />
           </div>
         ) : (

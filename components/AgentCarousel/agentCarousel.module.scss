@@ -19,6 +19,12 @@
     display: block;
   }
 
+  &__thumbs-text {
+    @media (max-width: 1024px) {
+      font-size: 10px;
+    }
+  }
+
   &__thumbs-image-wrapper {
     overflow: hidden;
     height: 28px;

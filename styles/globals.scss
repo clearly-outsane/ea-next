@@ -314,3 +314,44 @@ $stroke-wdith: 4;
   stroke-dashoffset: -134;
   stroke-width: $stroke-wdith;
 }
+
+//home page carousel styling
+.carousel.carousel-slider {
+  overflow: visible !important;
+  .control-dots {
+    position: absolute;
+    bottom: -28px;
+    @media (min-width: 1024px) {
+      bottom: -38px;
+    }
+
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    top: unset;
+    .dot {
+      background: 0 0;
+      color: inherit;
+      border: none;
+      padding: 0 !important;
+      font: inherit;
+      box-shadow: unset;
+      width: 8.64px;
+      height: 8.64px;
+      @media (min-width: 1024px) {
+        height: 14px;
+        width: 14px;
+      }
+      margin: 0 5px;
+      border: 1.5px solid #999;
+      opacity: 1;
+      &.selected {
+        background: #999;
+      }
+    }
+  }
+}
