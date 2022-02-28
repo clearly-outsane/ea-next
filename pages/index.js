@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { InView } from "react-intersection-observer";
 import CountUp from "react-countup";
+import Script from "next/script";
 
 //styles
 import styles from "../styles/home.module.scss";
@@ -27,6 +28,11 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
         />
         <link rel='icon' href='/favicon.png' />
       </Head>
+      <Script
+        src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GMAPS_API_KEY}&language=en&libraries=places`}
+        strategy='beforeInteractive'
+      />
+
       <Header />
       <MobileHeader />
       <main>
