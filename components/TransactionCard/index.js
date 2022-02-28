@@ -39,7 +39,14 @@ const TransactionCard = ({
           </div>
           <div className='flex  justify-self-start text-white  items-end'>
             <span className='flex items-center gap-3 lg:gap-5'>
-              <div className='profile-circle webkit-rounded-full rounded-full overflow-hidden safari-profile-gap'>
+              <div
+                className={`${styles["transaction-card__profile-circle"]} relative  webkit-rounded-full rounded-full overflow-hidden safari-profile-gap`}
+              >
+                <Image
+                  src={`/images/agents/${name.trim()}.jpg`}
+                  alt={name}
+                  layout='fill'
+                />
                 {/* <AgentImage name={name.trim()} className='w-full h-full' /> */}
               </div>
               <div className='flex flex-col '>
