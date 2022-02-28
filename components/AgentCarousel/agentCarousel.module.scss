@@ -1,6 +1,9 @@
 .agent-carousel {
   width: 100%;
   min-height: 445px;
+  &__thumbs {
+    display: block;
+  }
   @media (min-width: 640px) {
     height: auto;
     &__thumbs {
@@ -14,9 +17,6 @@
     &__thumbs {
       display: block;
     }
-  }
-  &__thumbs {
-    display: block;
   }
 
   &__thumbs-text {

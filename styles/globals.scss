@@ -321,6 +321,7 @@ $stroke-wdith: 4;
   .control-dots {
     position: absolute;
     bottom: -28px;
+
     @media (min-width: 1024px) {
       bottom: -38px;
     }
