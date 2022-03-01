@@ -360,11 +360,14 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
               date='31st Aug 2022 in PA'
             />
           </div>
-          {/* <div
+          <div
             className={`container mx-auto flex flex-col justify-around items-center ${styles["stories-section__bottom-content"]}`}
           >
-            <Button text='View All Reviews' />
-          </div> */}
+            <Button
+              text='View All Reviews'
+              href='https://www.shopperapproved.com/reviews/effectiveagents.com'
+            />
+          </div>
         </section>
         <BottomCTA />
         <Footer />

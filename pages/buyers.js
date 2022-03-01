@@ -474,7 +474,10 @@ const Buyers = ({ buyersTransactions }) => {
             <div
               className={`${styles["stories-section__btn-container"]} py-20`}
             >
-              <Button text='View all Reviews' />
+              <Button
+                href='https://www.shopperapproved.com/reviews/effectiveagents.com'
+                text='View all Reviews'
+              />
             </div>
           </div>
         </section>
