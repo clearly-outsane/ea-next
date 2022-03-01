@@ -238,7 +238,7 @@ const Footer = () => {
         </div>
         <div className='footer-bottom pt-10 flex justify-between'>
           <div
-            className='grid grid-flow-col auto-cols-auto items-center text-slate-600'
+            className='grid grid-flow-col auto-cols-auto w-full lg:w-auto items-center text-slate-600'
             style={{ gap: 30 }}
           >
             {/* <EaIcon className='inline' /> */}
