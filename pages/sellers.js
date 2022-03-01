@@ -112,13 +112,13 @@ const Sellers = ({ sellersTransactions }) => {
                         label='Last year our Agents sold homes for'
                       />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                       <InfoGraphic
                         number='$41,693'
                         numberText='More Than The Average Agent'
                         label='Last year our Agents sold homes for'
                       />
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                   </Swiper>
                   <div
                     className={`absolute bottom-4 lg:bottom-12 lg:right-12 z-10 ${styles["hero-section__slider-nav-container"]}`}
