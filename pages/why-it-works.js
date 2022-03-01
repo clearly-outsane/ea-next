@@ -188,11 +188,6 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
                   <div
                     className={`${styles["left-05__profile-wrapper"]} relative overflow-hidden rounded-full webkit-rounded-full`}
                   >
-                    {/* <StaticImage
-                          className=' w-full h-full'
-                          alt='Jane profile pic'
-                          src={"../assets/images/best-agents/Andy Peters.jpg"}
-                        /> */}
                     <Image
                       src={`/images/agents/Andy Peters.jpg`}
                       alt='andy peters pic'
@@ -265,10 +260,10 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
             className={`left-07 w-full h-full bg-light-blue-background ${styles["data-card__left"]} overflow-hidden webkit-rounded-full`}
           >
             <InfoGraphic
-              number='341'
+              number='190'
               numberText='Successful Transactions'
               showProfile={true}
-              {...bestAgents[5]}
+              {...bestAgents[6]}
             />
           </div>
         );
@@ -710,6 +705,15 @@ export async function getStaticProps(context) {
       average_day_on_market: "4",
       star_rating: "5",
       reviews: "348",
+    },
+    {
+      city: "San Antonio",
+      state: "TX",
+      name: "Zachariah Castillo",
+      listings_sold: "190",
+      average_day_on_market: "41",
+      star_rating: "4.9",
+      reviews: "113",
     },
   ];
 

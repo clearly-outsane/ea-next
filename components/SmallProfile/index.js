@@ -22,7 +22,12 @@ const SmallProfile = ({
         <div
           className={`${styles["small-profile__name"]}  ${fontColorClass} font-bold`}
         >
-          {name}
+          {name.split(" ")[0].length > 8
+            ? name.split(" ")[0] +
+              " " +
+              name.split(" ")[1].substring(0, 1) +
+              "."
+            : name}
         </div>
         <div
           className={`${styles["small-profile__location"]} italic ${fontColorClass}`}
