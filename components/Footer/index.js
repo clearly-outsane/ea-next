@@ -13,7 +13,7 @@ const Footer = () => {
       className={`${styles["footer"]} w-full flex justify-center content-center py-28 px-8 fade-in-section`}
     >
       <div className='flex flex-col divide-y-2 divide-gray-divide-color container mx-auto'>
-        <div className='flex justify-between items-center pb-12'>
+        <div className='flex flex-col lg:flex-row text-center lg:text-left justify-between items-center pb-12'>
           <h2 className='mb-0'>Find an Effective Agent Near You</h2>
           <div>
             <Button
@@ -23,7 +23,9 @@ const Footer = () => {
           </div>
         </div>
         <div className='py-10 '>
-          <div className='grid lg:flex lg:flex-row justify-between footer-link-section'>
+          <div
+            className={`grid lg:flex lg:flex-row justify-between ${styles["footer__link-container"]}`}
+          >
             <div
               className={`${styles["footer__heading"]} uppercase text-brand-green font-bold text-sm tracking-widest footer-links-block`}
               style={{ width: 148 }}
@@ -104,7 +106,9 @@ const Footer = () => {
               className='capitalize text-cyan-600  text-sm top-margin'
               style={{ width: 148 }}
             >
-              View all cities
+              <a href='https://www.effectiveagents.com/cities/'>
+                View all cities
+              </a>
               <div className='flex tracking-normal flex-col font-normal text-normal text-slate-800 justify-between pt-8 gap-1'>
                 <a
                   className={`${styles["footer__link"]}  lg:hidden`}
@@ -205,10 +209,25 @@ const Footer = () => {
               className={`${styles["footer__heading"]} uppercase text-brand-green font-bold text-sm tracking-widest footer-links-block top-margin lg:hidden`}
               style={{ width: 148 }}
             >
-              <div>
-                {/* <Facebook className='inline' style={{ marginRight: 12 }} />
-                <Twitter className='inline' style={{ marginRight: 12 }} />
-                <Linkedin className='inline' /> */}
+              <div className='flex gap-3'>
+                <Image
+                  src='/svgs/socials/Facebook.svg'
+                  width={18}
+                  height={18}
+                  alt='facebook icon'
+                />
+                <Image
+                  src='/svgs/socials/Twitter.svg'
+                  width={20}
+                  height={20}
+                  alt='Twitter icon'
+                />
+                <Image
+                  src='/svgs/socials/Linkedin.svg'
+                  width={20}
+                  height={20}
+                  alt='Linkedin icon'
+                />
               </div>
               <div className='flex tracking-normal flex-col font-normal capitalize text-slate-800 justify-between pt-8 gap-1'>
                 <div className={`${styles["footer__link"]}`}>Terms </div>

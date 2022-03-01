@@ -11,15 +11,7 @@
   @media (max-width: 1024px) {
     padding-top: 50px;
     padding-bottom: 50px;
-    > div {
-      > div {
-        flex-direction: column;
-        text-align: center;
-        > div {
-          text-align: left;
-        }
-      }
-    }
+
     .footer-bottom {
       > div {
         .inline {
@@ -28,10 +20,10 @@
         }
       }
     }
-    .footer-links-block.top-margin {
+    &__heading:not(:first-child) {
       margin-top: 42px;
     }
-    .footer-link-section {
+    &__link-container {
       grid-template-columns: minmax(0, 1fr) auto;
     }
   }

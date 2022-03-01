@@ -22,6 +22,7 @@ const SmallProfile = ({
         <div
           className={`${styles["small-profile__name"]}  ${fontColorClass} font-bold`}
         >
+          {/* Really stupid hack specifically for Zachariah lol */}
           {name.split(" ")[0].length > 8
             ? name.split(" ")[0] +
               " " +
