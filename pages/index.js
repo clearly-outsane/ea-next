@@ -319,7 +319,7 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
               <div className={`${styles["stories-section__rating"]}`}>4.9</div>
               <div className={`${styles["stories-section__stars"]}`}>
                 <Image
-                  src='/svgs/empty-stars.svg'
+                  src='/svgs/filled-stars.svg'
                   alt='Ratings'
                   width={126}
                   height={23}
