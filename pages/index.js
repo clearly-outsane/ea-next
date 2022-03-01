@@ -326,9 +326,12 @@ const Home = ({ bestAgents, mapsStyleArray }) => {
                 />
               </div>
               <p>
-                Google rating based on over{" "}
-                <a href='#' className='text-cyan-700'>
-                  1,182+ reviews
+                ShopperApproved rating based on over{" "}
+                <a
+                  href='https://www.shopperapproved.com/reviews/effectiveagents.com'
+                  className='text-cyan-700'
+                >
+                  1,168+ reviews
                 </a>
               </p>
             </div>
