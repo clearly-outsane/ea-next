@@ -34,6 +34,17 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
     setCurrentSlide(i);
   };
 
+  const onArrowNextClick = () => {
+    setCurrentSlide((state) => (state + 1) % 4);
+  };
+
+  const onArrowPrevClick = () => {
+    setCurrentSlide((state) => {
+      if (state == 0) return 3;
+      else return state - 1;
+    });
+  };
+
   const updateCurrentSlide = (index) => {
     if (currentSlide !== index) {
       setCurrentSlide(index);
@@ -61,16 +72,6 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
             showIndicators={true}
             showStatus={false}
             showArrows={false}
-            renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
-                <button
-                  className='control-arrow control-prev'
-                  aria-label='previous slide / item'
-                  type='button'
-                  onClick={onClickHandler}
-                ></button>
-              )
-            }
             useKeyboardArrows={true}
             swipeable={true}
             infiniteLoop={true}
@@ -81,6 +82,32 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
               return <AgentCard key={i} {...agent} />;
             })}
           </Carousel>
+          <div
+            className={`absolute ${styles["agent-carousel__prev-arrow"]} pointer-events-auto cursor-pointer`}
+            onClick={() => {
+              onArrowPrevClick();
+            }}
+          >
+            <Image
+              src='/svgs/small-gray-left-arrow.svg'
+              alt='left carousel arrow'
+              width={20}
+              height={20}
+            />
+          </div>
+          <div
+            className={`absolute right-0 ${styles["agent-carousel__next-arrow"]} pointer-events-auto cursor-pointer`}
+            onClick={() => {
+              onArrowNextClick();
+            }}
+          >
+            <Image
+              src='/svgs/small-gray-right-arrow.svg'
+              alt='right carousel arrow'
+              width={20}
+              height={20}
+            />
+          </div>
         </div>
         <div
           className={`${styles["agent-carousel__thumbs"]} absolute bottom-0 left-6`}
