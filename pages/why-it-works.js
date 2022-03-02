@@ -136,7 +136,11 @@ const WhyItWorks = ({ bestAgents, mapsStyleArray }) => {
                   <div
                     className={`p-12 ${styles["left-04__profile-container"]}`}
                   >
-                    <SmallProfile name='Bruno Arapovic' />
+                    <SmallProfile
+                      name='Bruno Arapovic'
+                      city='Phoenix'
+                      state='AZ'
+                    />
                   </div>
                   <div className={`p-12 ${styles["left-04__bottom-content"]}`}>
                     <div

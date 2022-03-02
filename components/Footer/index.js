@@ -6,6 +6,7 @@ import styles from "./footer.module.scss";
 
 //components
 import Button from "../PrimaryButton";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -154,16 +155,20 @@ const Footer = () => {
             >
               General
               <div className='flex tracking-normal flex-col font-normal capitalize text-slate-800 justify-between pt-8 gap-1'>
-                <a className={`${styles["footer__link"]}`} href='#'>
-                  For sellers
-                </a>
-                <a className={`${styles["footer__link"]}`} href='#'>
-                  For Buyers
-                </a>
-                <a className={`${styles["footer__link"]}`} href='#'>
-                  Why it works
-                </a>
-                <a className={`${styles["footer__link"]}`} href='#'>
+                <Link href='/sellers'>
+                  <a className={`${styles["footer__link"]}`}>For sellers</a>
+                </Link>
+                <Link href='/buyers'>
+                  <a className={`${styles["footer__link"]}`}>For Buyers</a>
+                </Link>
+                <Link href='/why-it-works'>
+                  <a className={`${styles["footer__link"]}`}>Why it works</a>
+                </Link>
+
+                <a
+                  className={`${styles["footer__link"]}`}
+                  href='https://www.effectiveagents.com/resources/'
+                >
                   Resources
                 </a>
               </div>
@@ -194,13 +199,22 @@ const Footer = () => {
             >
               For Agents
               <div className='flex tracking-normal flex-col font-normal capitalize text-slate-800 justify-between pt-8 gap-1'>
-                <a className={`${styles["footer__link"]}`} href='#'>
+                <a
+                  className={`${styles["footer__link"]}`}
+                  href='https://www.effectiveagents.com/agents-/'
+                >
                   Agents Portal
                 </a>
-                <a className={`${styles["footer__link"]}`} href='#'>
+                <a
+                  className={`${styles["footer__link"]}`}
+                  href='https://www.effectiveagents.com/agents/'
+                >
                   For Agents
                 </a>
-                <a className={`${styles["footer__link"]}`} href='#'>
+                <a
+                  className={`${styles["footer__link"]}`}
+                  href='https://www.effectiveagents.com/agentsignup/'
+                >
                   Becoming an agent
                 </a>
               </div>

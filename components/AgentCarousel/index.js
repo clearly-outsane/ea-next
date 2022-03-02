@@ -119,7 +119,7 @@ const AgentCarousel = ({ bestAgents, mapsStyleArray }) => {
               {bestAgents[currentSlide].agent_count}+{" "}
             </div>
             Realtors®
-            <br /> in {bestAgents[currentSlide].city} ,
+            <br /> in {bestAgents[currentSlide].city},{" "}
             {bestAgents[currentSlide].state}
           </div>
           <div className='pt-4 flex'>
